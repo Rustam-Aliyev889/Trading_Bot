@@ -1,6 +1,7 @@
 import yfinance as yf
 import pandas as pd
 import numpy as np
+from performance_visualization import calculate_sharpe_ratio, calculate_max_drawdown, calculate_cagr, calculate_win_loss_ratio, plot_performance, performance_metrics
 
 # Download historical data for SPY
 data = yf.download('SPY', start='2022-01-01', end='2024-05-30')
@@ -53,5 +54,8 @@ def run_trading_bot():
     print(backtested_data[['SMA50', 'SMA200', 'signal', 'positions']].dropna())
     print(backtested_data[['Open', 'High', 'Low', 'Close', 'signal', 'positions', 'equity']].dropna())
     print("Final equity:", backtested_data['equity'].iloc[-1])
+    performance_metrics(backtested_data)
+    # Plot performance
+    plot_performance(backtested_data)
 
 run_trading_bot()
