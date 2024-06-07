@@ -1,7 +1,8 @@
+#sma
 import numpy as np
 import pandas as pd
 from itertools import product
-from trade_bot import generate_signals, backtest_strategy
+from sma_strategy import generate_signals, backtest_strategy
 from performance_visualization import calculate_sharpe_ratio, calculate_max_drawdown, calculate_cagr, calculate_win_loss_ratio
 
 def optimize_parameters(data, short_window_range, long_window_range, initial_capital):
