@@ -1,0 +1,160 @@
+2024-06-07 20:05:28,339 - INFO - Strategy executed
+2024-06-07 20:08:40,987 - INFO - Strategy executed
+2024-06-10 12:07:16,180 - WARNING - No data available to execute strategy
+2024-06-10 12:10:57,587 - WARNING - No data available to execute strategy for symbol: AAPL
+2024-06-10 12:33:29,526 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 12:35:34,200 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 12:36:34,396 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 12:57:38,594 - ERROR - Error fetching data for SPY: 403 Client Error: Forbidden for url: https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&start=2024-06-09T12%3A57%3A38.248561-04%3A00&end=2024-06-10T12%3A57%3A38.248561-04%3A00&feed=iex
+2024-06-10 12:57:38,595 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 14:53:44,068 - ERROR - Error fetching data for SPY: 403 Client Error: Forbidden for url: https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&start=2024-06-09T14%3A53%3A43.697898-04%3A00&end=2024-06-10T14%3A53%3A43.697898-04%3A00&feed=iex
+2024-06-10 14:53:44,074 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 14:55:39,575 - INFO - Fetched data for SPY from 2024-06-09T14:55:39.079804-04:00 to 2024-06-10T14:55:39.079804-04:00
+2024-06-10 14:55:39,579 - INFO - Signals generated
+2024-06-10 14:55:39,579 - INFO - Strategy executed
+2024-06-10 15:00:54,976 - ERROR - Error fetching data for SPY: 403 Client Error: Forbidden for url: https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&start=2024-06-09T15%3A00%3A54.614711-04%3A00&end=2024-06-10T15%3A00%3A54.614711-04%3A00&feed=iex
+2024-06-10 15:00:54,979 - WARNING - No data available to execute strategy for symbol: SPY
+
+2024-06-10 15:11:41,342 - ERROR - Error fetching data for SPY: 403 Client Error: Forbidden for url: https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&start=2024-06-09T15%3A11%3A41.011041-04%3A00&end=2024-06-10T15%3A11%3A41.011041-04%3A00&feed=iex
+2024-06-10 15:11:41,343 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 15:12:32,939 - INFO - Fetched data for SPY from 2024-06-09T15:12:32.539271-04:00 to 2024-06-10T15:12:32.539271-04:00
+2024-06-10 15:12:32,944 - INFO - Signals generated
+2024-06-10 15:12:32,945 - INFO - Strategy executed
+2024-06-10 15:12:47,487 - INFO - Fetched data for SPY from 2024-06-09T15:12:47.158038-04:00 to 2024-06-10T15:12:47.158038-04:00
+2024-06-10 15:12:47,489 - INFO - Signals generated
+2024-06-10 15:12:47,489 - INFO - Strategy executed
+2024-06-10 15:18:10,964 - INFO - Fetched data for SPY from 2024-06-09T15:18:10.531081-04:00 to 2024-06-10T15:18:10.531081-04:00
+2024-06-10 15:18:10,965 - INFO - Signals generated
+2024-06-10 15:18:10,966 - INFO - Strategy executed
+2024-06-10 15:18:56,036 - INFO - Fetched data for SPY from 2024-06-09T15:18:55.646594-04:00 to 2024-06-10T15:18:55.646594-04:00
+2024-06-10 15:18:56,038 - INFO - Signals generated
+2024-06-10 15:18:56,039 - INFO - Strategy executed
+2024-06-10 15:28:37,605 - ERROR - Error fetching data for SPY: 403 Client Error: Forbidden for url: https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&start=2024-06-09T15%3A28%3A37.156126-04%3A00&end=2024-06-10T15%3A28%3A37.156126-04%3A00&feed=iex
+2024-06-10 15:28:37,610 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 19:09:49,263 - ERROR - Error fetching data for SPY: 403 Client Error: Forbidden for url: https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&start=2024-06-09T19%3A09%3A48.876549-04%3A00&end=2024-06-10T19%3A09%3A48.876549-04%3A00&feed=iex
+2024-06-10 19:09:49,271 - WARNING - No data available to execute strategy for symbol: SPY
+2024-06-10 19:10:24,217 - INFO - Fetched data for SPY from 2024-06-09T19:10:23.786342-04:00 to 2024-06-10T19:10:23.786342-04:00
+2024-06-10 19:10:24,222 - INFO - Signals generated
+2024-06-10 19:10:24,225 - INFO - Strategy executed
+2024-06-10 19:12:47,677 - INFO - Fetched data for SPY from 2024-06-09T19:12:47.256701-04:00 to 2024-06-10T19:12:47.256701-04:00
+2024-06-10 19:12:47,712 - INFO - Signals generated
+2024-06-10 19:12:47,719 - INFO - Strategy executed
+2024-06-10 19:14:26,775 - INFO - Fetched data for SPY from 2024-06-09T19:14:26.359145-04:00 to 2024-06-10T19:14:26.359145-04:00
+2024-06-10 19:14:26,780 - INFO - Signals generated
+2024-06-10 19:14:26,785 - INFO - Strategy executed
+2024-06-10 19:16:33,674 - INFO - Fetched data for SPY from 2024-06-09T19:16:33.247642-04:00 to 2024-06-10T19:16:33.247642-04:00
+2024-06-10 19:16:33,677 - INFO - Signals generated
+2024-06-10 19:16:33,682 - INFO - Strategy executed
+2024-06-10 19:18:36,611 - INFO - Fetched data for SPY from 2024-06-09T19:18:36.207579-04:00 to 2024-06-10T19:18:36.207579-04:00
+2024-06-10 19:18:36,612 - INFO - Signals generated
+2024-06-10 19:18:36,616 - INFO - Strategy executed
+2024-06-10 19:18:46,917 - INFO - Fetched data for SPY from 2024-06-09T19:18:46.513909-04:00 to 2024-06-10T19:18:46.513909-04:00
+2024-06-10 19:18:46,919 - INFO - Signals generated
+2024-06-10 19:18:46,922 - INFO - Strategy executed
+2024-06-10 19:20:34,422 - INFO - Fetched data for SPY from 2024-06-09T19:20:33.971065-04:00 to 2024-06-10T19:20:33.971065-04:00
+2024-06-10 19:20:34,424 - INFO - Signals generated
+2024-06-10 19:20:34,427 - INFO - Strategy executed
+2024-06-10 19:23:38,746 - INFO - Fetched data for SPY from 2024-06-09T19:23:38.338328-04:00 to 2024-06-10T19:23:38.338328-04:00
+2024-06-10 19:23:38,748 - INFO - Signals generated
+2024-06-10 19:23:38,753 - INFO - Strategy executed
+2024-06-10 19:23:39,076 - ERROR - Error in manual order submission: 404 Client Error: Not Found for url: https://paper-api.alpaca.markets/v2/v2/orders
+2024-06-10 19:23:58,456 - INFO - Fetched data for SPY from 2024-06-09T19:23:58.055811-04:00 to 2024-06-10T19:23:58.055811-04:00
+2024-06-10 19:23:58,458 - INFO - Signals generated
+2024-06-10 19:23:58,461 - INFO - Strategy executed
+2024-06-10 19:24:25,287 - INFO - Fetched data for SPY from 2024-06-09T19:24:24.880845-04:00 to 2024-06-10T19:24:24.880845-04:00
+2024-06-10 19:24:25,290 - INFO - Signals generated
+2024-06-10 19:24:25,294 - INFO - Strategy executed
+2024-06-10 19:24:25,570 - ERROR - Error in manual order submission: 404 Client Error: Not Found for url: https://paper-api.alpaca.markets/v2/v2/orders
+2024-06-10 19:26:19,605 - INFO - Fetched data for SPY from 2024-06-09T19:26:19.076386-04:00 to 2024-06-10T19:26:19.076386-04:00
+2024-06-10 19:26:19,607 - INFO - Signals generated
+2024-06-10 19:26:19,611 - INFO - Strategy executed
+2024-06-10 19:26:19,888 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a758dabe-7c2e-4d1d-b2a6-dd4e72af0b1a',
+    'created_at': '2024-06-10T18:26:19.724372807Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '968cf8e8-4d45-4753-90e2-572337d3a531',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-10T18:26:19.724372807Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-10T18:26:19.724805437Z'})
+2024-06-10 19:26:19,993 - INFO - Order Status for 968cf8e8-4d45-4753-90e2-572337d3a531: new
+2024-06-10 19:30:21,859 - INFO - Fetched data for SPY from 2024-06-09T19:30:21.418939-04:00 to 2024-06-10T19:30:21.418939-04:00
+2024-06-10 19:30:21,862 - INFO - Signals generated
+2024-06-10 19:30:21,869 - INFO - Strategy executed
+2024-06-10 19:30:22,310 - ERROR - Error in manual order submission: insufficient buying power
+2024-06-10 19:32:09,154 - INFO - Fetched data for SPY from 2024-06-09T19:32:08.713229-04:00 to 2024-06-10T19:32:08.713229-04:00
+2024-06-10 19:32:09,158 - INFO - Signals generated
+2024-06-10 19:32:09,163 - INFO - Strategy executed
+2024-06-10 19:32:09,463 - ERROR - Error in manual order submission: insufficient buying power
+2024-06-10 19:35:14,196 - INFO - Fetched data for SPY from 2024-06-09T19:35:13.781792-04:00 to 2024-06-10T19:35:13.781792-04:00
+2024-06-10 19:35:14,197 - INFO - Signals generated
+2024-06-10 19:35:14,201 - INFO - Strategy executed
+2024-06-10 19:36:33,718 - INFO - Fetched data for SPY from 2024-06-09T19:36:33.307174-04:00 to 2024-06-10T19:36:33.307174-04:00
+2024-06-10 19:36:33,719 - INFO - Signals generated
+2024-06-10 19:36:33,723 - INFO - Strategy executed
+2024-06-10 19:36:34,012 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '24394ee0-2917-4e21-85d0-64ee728e84f4',
+    'created_at': '2024-06-10T18:36:33.847876836Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '675ffda7-92f7-496f-b34c-ec40c2315b1c',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-10T18:36:33.847876836Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-10T18:36:33.848321616Z'})
+2024-06-10 19:36:34,104 - INFO - Order Status for 675ffda7-92f7-496f-b34c-ec40c2315b1c: new
+2024-06-10 19:36:56,037 - INFO - Fetched data for SPY from 2024-06-09T19:36:55.631029-04:00 to 2024-06-10T19:36:55.631029-04:00
+2024-06-10 19:36:56,040 - INFO - Signals generated
+2024-06-10 19:36:56,045 - INFO - Strategy executed
+2024-06-10 19:39:06,391 - INFO - Fetched data for SPY from 2024-06-09T19:39:05.958160-04:00 to 2024-06-10T19:39:05.958160-04:00
+2024-06-10 19:39:06,394 - INFO - Signals generated
+2024-06-10 19:39:06,397 - INFO - Strategy executed
