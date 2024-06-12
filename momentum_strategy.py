@@ -2,6 +2,7 @@ import alpaca_trade_api as tradeapi
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+import asyncio
 import logging
 
 # Configure logging
@@ -13,56 +14,21 @@ ALPACA_SECRET_KEY = 'C37Utl7xvx5SLibmTKveTgnzH0D4CPIfVO62xiwl'
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
+conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_feed='iex')
 
-def fetch_data(symbol, start, end, timeframe='1Min'):
-    try:
-        start = pd.Timestamp(start, tz='America/New_York').isoformat()
-        end = pd.Timestamp(end, tz='America/New_York').isoformat()
-        
-        barset = api.get_bars(
-            symbol,
-            tradeapi.TimeFrame.Minute,
-            start=start,
-            end=end,
-            adjustment='raw',
-            feed='iex'
-        ).df
-        
-        # Reset index and rename columns
-        df = barset.reset_index().rename(columns={
-            'timestamp': 'time',
-            'open': 'open',
-            'high': 'high',
-            'low': 'low',
-            'close': 'close',
-            'volume': 'volume'
-        })
-        
-        # Handle missing data
-        df = df.dropna().reset_index(drop=True)
-        
-        # Log the fetched data
-        logging.info(f"Fetched data for {symbol} from {start} to {end}")
-        return df
-    except tradeapi.rest.APIError as e:
-        logging.error(f"Error fetching data for {symbol}: {e}")
-        if "Forbidden" in str(e):
-            logging.warning("Forbidden Error: You might not have access to this data.")
-        return pd.DataFrame()
-    except Exception as e:
-        logging.error(f"Error fetching data for {symbol}: {e}")
-        return pd.DataFrame()
+symbol = 'SPY'
+window = 20
+price_history = []
 
-def generate_signals(data, window=20):
-    try:
-        data['returns'] = data['close'].pct_change()
-        data['signal'] = np.where(data['returns'] > 0, 1, -1)
-        data['positions'] = data['signal'].diff()
-        logging.info("Signals generated")
-        return data
-    except Exception as e:
-        logging.error(f"Error generating signals: {e}")
-        return pd.DataFrame()
+def generate_signals(price_history):
+    if len(price_history) < window:
+        return None
+
+    data = pd.Series(price_history)
+    returns = data.pct_change()
+    signal = 1 if returns.iloc[-1] > 0 else -1
+    logging.info(f"Generated signal: {signal} based on returns: {returns.iloc[-1]}")
+    return signal
 
 def execute_trade(symbol, signal):
     try:
@@ -101,30 +67,34 @@ def check_order_status(order_id):
     except Exception as e:
         logging.error(f"Error checking order status for {order_id}: {e}")
 
-def run_momentum_strategy(symbol='SPY', window=20):
+async def on_minute_bars(bar):
+    price_history.append(bar.close)
+    logging.info(f"Received new bar data: {bar.close}")
+
+    if len(price_history) > window:
+        price_history.pop(0)
+
+    signal = generate_signals(price_history)
+    if signal is not None:
+        execute_trade(symbol, signal)
+
+async def run_momentum_strategy():
     try:
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=1)
-        data = fetch_data(symbol, start=start_date.isoformat(), end=end_date.isoformat())
-        
-        if not data.empty:
-            data_with_signals = generate_signals(data, window)
-            
-            for i in range(1, len(data_with_signals)):
-                if data_with_signals['positions'].iloc[i] == 1:
-                    execute_trade(symbol, 1)
-                elif data_with_signals['positions'].iloc[i] == -1:
-                    execute_trade(symbol, -1)
-            
-            logging.info("Strategy executed")
-        else:
-            logging.warning(f"No data available to execute strategy for symbol: {symbol}")
+        # Subscribe to minute bars
+        conn.subscribe_bars(on_minute_bars, symbol)
+
+        # Start the WebSocket connection
+        await conn._run_forever()
     except Exception as e:
         logging.error(f"Error running strategy: {e}")
 
+async def main():
+    await run_momentum_strategy()
+
 if __name__ == "__main__":
-    run_momentum_strategy()
-    
+    loop = asyncio.get_event_loop()
+    loop.create_task(main())
+
     # Manually test order submission
     try:
         print("Testing manual order submission...")
@@ -142,3 +112,6 @@ if __name__ == "__main__":
     except Exception as e:
         logging.error(f"Error in manual order submission: {e}")
         print(f"Error in manual order submission: {e}")
+
+    # Run the event loop
+    loop.run_forever()
