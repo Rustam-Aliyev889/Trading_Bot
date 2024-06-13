@@ -4,6 +4,8 @@ import numpy as np
 from datetime import datetime, timedelta
 import asyncio
 import logging
+from trade_log import initialize_trade_log, log_trade, wait_for_fill
+from performance_metrics import initialize_performance_log, log_portfolio_value
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='momentum_strategy.log', filemode='a',
@@ -52,8 +54,14 @@ def execute_trade(symbol, signal):
             )
         logging.info(f"Order submitted: {order}")
 
-        # Check order status
-        check_order_status(order.id)
+        # Wait for the order to be filled and retrieve the filled order
+        filled_order = wait_for_fill(api, order.id)
+
+        # Log the trade to CSV
+        log_trade(filled_order, 'buy' if signal == 1 else 'sell')
+
+        # Log portfolio value
+        log_portfolio_value()
 
     except tradeapi.rest.APIError as e:
         logging.error(f"API Error executing trade: {e}")
@@ -92,6 +100,8 @@ async def main():
     await run_momentum_strategy()
 
 if __name__ == "__main__":
+    initialize_trade_log()
+    initialize_performance_log()
     loop = asyncio.get_event_loop()
     loop.create_task(main())
 
@@ -108,7 +118,16 @@ if __name__ == "__main__":
         print(f"Manual order response: {test_order}")
         logging.info(f"Manual order response: {test_order}")
         
-        check_order_status(test_order.id)
+        # Wait for the order to be filled and retrieve the filled order
+        filled_order = wait_for_fill(api, test_order.id)
+        
+        check_order_status(filled_order.id)
+        
+        # Log the trade to CSV
+        log_trade(filled_order, 'buy')
+        
+        # Log portfolio value
+        log_portfolio_value()
     except Exception as e:
         logging.error(f"Error in manual order submission: {e}")
         print(f"Error in manual order submission: {e}")

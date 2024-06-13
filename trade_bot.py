@@ -1,4 +1,4 @@
-from sma_strategy import run_sma_strategy
+from sma.sma_strategy import run_sma_strategy
 from momentum_strategy import run_momentum_strategy
 
 def run_trading_bot(strategy_name='SMA'):
