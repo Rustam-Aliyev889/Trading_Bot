@@ -4,6 +4,7 @@ import numpy as np
 from datetime import datetime, timedelta, time
 import asyncio
 import logging
+import pytz
 from trade_log import initialize_trade_log, log_trade, wait_for_fill
 from performance_metrics import initialize_performance_log, log_portfolio_value, calculate_metrics, generate_report
 
@@ -24,16 +25,17 @@ symbol = 'SPY'
 window = 20
 price_history = []
 
-# Define Market Hours
+# Define Market Hours in New York Time Zone
+NY_TZ = pytz.timezone('America/New_York')
 MARKET_OPEN = time(9, 30)
 MARKET_CLOSE = time(16, 0)
 
 def is_market_open():
-    now = datetime.now().time()
+    now = datetime.now(NY_TZ).time()
     return MARKET_OPEN <= now <= MARKET_CLOSE
 
 def is_market_close():
-    now = datetime.now().time()
+    now = datetime.now(NY_TZ).time()
     return now >= MARKET_CLOSE
 
 def generate_signals(price_history):
@@ -110,18 +112,28 @@ async def on_minute_bars(bar):
 
 async def run_momentum_strategy():
     try:
-        # Subscribe to minute bars
-        conn.subscribe_bars(on_minute_bars, symbol)
-
-        # Start the WebSocket connection
-        await conn._run_forever()
+        while True:
+            if is_market_open():
+                # Subscribe to minute bars
+                conn.subscribe_bars(on_minute_bars, symbol)
+                # Start the WebSocket connection
+                await conn._run_forever()
+            else:
+                logging.info("Market is closed. Waiting for market to open.")
+                # Sleep until market open
+                now = datetime.now(NY_TZ)
+                market_open_time = datetime.combine(now.date(), MARKET_OPEN, tzinfo=NY_TZ)
+                if now.time() > MARKET_OPEN:
+                    market_open_time += timedelta(days=1)  # Schedule for next day if market is already open
+                time_until_open = (market_open_time - now).total_seconds()
+                await asyncio.sleep(time_until_open)
     except Exception as e:
         logging.error(f"Error running strategy: {e}")
 
 async def update_report_at_close():
     while True:
-        now = datetime.now()
-        market_close_time = datetime.combine(now.date(), MARKET_CLOSE)
+        now = datetime.now(NY_TZ)
+        market_close_time = datetime.combine(now.date(), MARKET_CLOSE, tzinfo=NY_TZ)
         
         if now.time() >= MARKET_CLOSE:
             market_close_time += timedelta(days=1)  # Schedule for next day if market is already closed

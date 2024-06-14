@@ -23136,3 +23136,48 @@
 2024-06-14 16:22:59,987 - INFO - Market is closed. Skipping bar processing.
 2024-06-14 16:23:59,984 - INFO - Market is closed. Skipping bar processing.
 2024-06-14 16:24:59,984 - INFO - Market is closed. Skipping bar processing.
+2024-06-14 16:31:49,581 - INFO - Market is closed. Manual order submission skipped.
+2024-06-14 16:31:49,582 - INFO - Market is closed. Waiting for market to open.
+2024-06-14 16:36:48,849 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'b5e4fc4d-aea0-48c6-9df8-a3c32f5890b3',
+    'created_at': '2024-06-14T15:36:48.958258151Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '66cb09c2-d8ba-44e3-9185-7e8715849d4c',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-14T15:36:48.958258151Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-14T15:36:48.959097981Z'})
+2024-06-14 16:36:50,117 - INFO - Order Status for 66cb09c2-d8ba-44e3-9185-7e8715849d4c: filled
+2024-06-14 16:36:50,832 - INFO - started stock data stream
+2024-06-14 16:36:50,833 - INFO - starting stock data websocket connection
+2024-06-14 16:36:51,416 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-14 16:36:51,675 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-14 16:36:59,977 - INFO - Received new bar data: 541.555
+2024-06-14 16:37:59,981 - INFO - Received new bar data: 541.45
+2024-06-14 16:38:59,982 - INFO - Received new bar data: 541.415
+2024-06-14 16:40:59,980 - INFO - Received new bar data: 541.16
