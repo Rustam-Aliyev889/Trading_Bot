@@ -1,18 +1,15 @@
 import alpaca_trade_api as tradeapi
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta, time
+from datetime import datetime, timedelta
 import asyncio
 import logging
-import pytz
 from trade_log import initialize_trade_log, log_trade, wait_for_fill
-from performance_metrics import initialize_performance_log, log_portfolio_value, calculate_metrics, generate_report
+from performance_metrics import initialize_performance_log, log_portfolio_value
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='momentum_strategy.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
-
-PERFORMANCE_LOG_FILE = 'performance_log.csv'
 
 ALPACA_API_KEY = 'PKQL7W0WXZV1RKPTYRUG'
 ALPACA_SECRET_KEY = 'C37Utl7xvx5SLibmTKveTgnzH0D4CPIfVO62xiwl'
@@ -22,21 +19,8 @@ api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2
 conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_feed='iex')
 
 symbol = 'SPY'
-window = 20
+window = 4
 price_history = []
-
-# Define Market Hours in New York Time Zone
-NY_TZ = pytz.timezone('America/New_York')
-MARKET_OPEN = time(9, 30)
-MARKET_CLOSE = time(16, 0)
-
-def is_market_open():
-    now = datetime.now(NY_TZ).time()
-    return MARKET_OPEN <= now <= MARKET_CLOSE
-
-def is_market_close():
-    now = datetime.now(NY_TZ).time()
-    return now >= MARKET_CLOSE
 
 def generate_signals(price_history):
     if len(price_history) < window:
@@ -48,23 +32,36 @@ def generate_signals(price_history):
     logging.info(f"Generated signal: {signal} based on returns: {returns.iloc[-1]}")
     return signal
 
-def execute_trade(symbol, signal):
-    if not is_market_open():
-        logging.info("Market is closed. Trade execution skipped.")
-        return
-
+def get_latest_price(symbol):
     try:
+        bars = api.get_bars(symbol, tradeapi.rest.TimeFrame.Minute, limit=1).df
+        latest_price = bars['close'].iloc[-1]
+        return latest_price
+    except Exception as e:
+        logging.error(f"Error fetching latest price for {symbol}: {e}")
+        return None
+
+def execute_trade(symbol, signal):
+    try:
+        latest_price = get_latest_price(symbol)
+        if latest_price is None:
+            logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
+            return
+        
         if signal == 1:
-            logging.info(f"Executing Buy for {symbol}")
+            logging.info(f"Executing Buy for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
                 qty=1,
                 side='buy',
                 type='market',
-                time_in_force='day'
+                time_in_force='day',
+                order_class='bracket',
+                stop_loss={'stop_price': round(latest_price * 0.99, 2)},
+                take_profit={'limit_price': round(latest_price * 1.01, 2)}
             )
         elif signal == -1:
-            logging.info(f"Executing Sell for {symbol}")
+            logging.info(f"Executing Sell for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
                 qty=1,
@@ -96,10 +93,6 @@ def check_order_status(order_id):
         logging.error(f"Error checking order status for {order_id}: {e}")
 
 async def on_minute_bars(bar):
-    if not is_market_open():
-        logging.info("Market is closed. Skipping bar processing.")
-        return
-
     price_history.append(bar.close)
     logging.info(f"Received new bar data: {bar.close}")
 
@@ -112,42 +105,13 @@ async def on_minute_bars(bar):
 
 async def run_momentum_strategy():
     try:
-        while True:
-            if is_market_open():
-                # Subscribe to minute bars
-                conn.subscribe_bars(on_minute_bars, symbol)
-                # Start the WebSocket connection
-                await conn._run_forever()
-            else:
-                logging.info("Market is closed. Waiting for market to open.")
-                # Sleep until market open
-                now = datetime.now(NY_TZ)
-                market_open_time = datetime.combine(now.date(), MARKET_OPEN, tzinfo=NY_TZ)
-                if now.time() > MARKET_OPEN:
-                    market_open_time += timedelta(days=1)  # Schedule for next day if market is already open
-                time_until_open = (market_open_time - now).total_seconds()
-                await asyncio.sleep(time_until_open)
+        # Subscribe to minute bars
+        conn.subscribe_bars(on_minute_bars, symbol)
+
+        # Start the WebSocket connection
+        await conn._run_forever()
     except Exception as e:
         logging.error(f"Error running strategy: {e}")
-
-async def update_report_at_close():
-    while True:
-        now = datetime.now(NY_TZ)
-        market_close_time = datetime.combine(now.date(), MARKET_CLOSE, tzinfo=NY_TZ)
-        
-        if now.time() >= MARKET_CLOSE:
-            market_close_time += timedelta(days=1)  # Schedule for next day if market is already closed
-        
-        time_until_close = (market_close_time - now).total_seconds()
-        await asyncio.sleep(time_until_close)
-        
-        # Update the report
-        df = pd.read_csv(PERFORMANCE_LOG_FILE, parse_dates=['Timestamp'], index_col='Timestamp')
-        generate_report()
-        logging.info("Report updated at market close")
-        
-        # Sleep until the next market close
-        await asyncio.sleep(24 * 60 * 60 - time_until_close)
 
 async def main():
     await run_momentum_strategy()
@@ -157,34 +121,30 @@ if __name__ == "__main__":
     initialize_performance_log()
     loop = asyncio.get_event_loop()
     loop.create_task(main())
-    loop.create_task(update_report_at_close())
 
     # Manually test order submission
     try:
-        if is_market_open():
-            print("Testing manual order submission...")
-            test_order = api.submit_order(
-                symbol='SPY',
-                qty=1,
-                side='buy',
-                type='market',
-                time_in_force='day'
-            )
-            print(f"Manual order response: {test_order}")
-            logging.info(f"Manual order response: {test_order}")
-            
-            # Wait for the order to be filled and retrieve the filled order
-            filled_order = wait_for_fill(api, test_order.id)
-            
-            check_order_status(filled_order.id)
-            
-            # Log the trade to CSV
-            log_trade(filled_order, 'buy')
-            
-            # Log portfolio value
-            log_portfolio_value()
-        else:
-            logging.info("Market is closed. Manual order submission skipped.")
+        print("Testing manual order submission...")
+        test_order = api.submit_order(
+            symbol='SPY',
+            qty=1,
+            side='buy',
+            type='market',
+            time_in_force='day'
+        )
+        print(f"Manual order response: {test_order}")
+        logging.info(f"Manual order response: {test_order}")
+        
+        # Wait for the order to be filled and retrieve the filled order
+        filled_order = wait_for_fill(api, test_order.id)
+        
+        check_order_status(filled_order.id)
+        
+        # Log the trade to CSV
+        log_trade(filled_order, 'buy')
+        
+        # Log portfolio value
+        log_portfolio_value()
     except Exception as e:
         logging.error(f"Error in manual order submission: {e}")
         print(f"Error in manual order submission: {e}")
