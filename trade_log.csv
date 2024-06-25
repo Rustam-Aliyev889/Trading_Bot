@@ -23,3 +23,8 @@ Timestamp,Symbol,Action,Quantity,Price,Order ID,Status
 2024-06-21 20:25:19,SPY,buy,1,544.63,a1467339-5404-4f53-967d-3a30fb9caaeb,filled
 2024-06-21 20:43:34,SPY,buy,1,544.43,5f18b40c-c14e-44b2-94ed-0d1daf2ee9ff,filled
 2024-06-25 14:47:01,SPY,buy,1,543.59,74c03a4d-da8d-4eb7-a953-6af27368e13d,filled
+2024-06-25 16:40:45,SPY,buy,1,544,161623ba-6c54-441d-9d81-ea99e2bdeb04,filled
+2024-06-25 17:16:21,SPY,buy,1,543.83,a3a6be2e-671e-4396-9a2b-07de79b168aa,filled
+2024-06-25 17:39:07,SPY,buy,1,543.36,e65c22e9-59e7-4508-9af5-a9a34b821245,filled
+2024-06-25 18:22:19,SPY,buy,1,543.35,d752070e-a5cb-47bc-a615-212e81d67b68,filled
+2024-06-25 18:52:25,SPY,buy,1,544.02,cbb31ef1-a7bd-4de1-8682-6143df387796,filled

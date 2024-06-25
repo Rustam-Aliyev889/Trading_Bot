@@ -25,11 +25,17 @@ active_trades = []
 
 def generate_signals(price_history):
     if len(price_history) < window:
-        return None
+        return 0  # Neutral signal if not enough data
 
     data = pd.Series(price_history)
     returns = data.pct_change()
-    signal = 1 if returns.iloc[-1] > 0 else -1
+    if returns.iloc[-1] > 0:
+        signal = 1
+    elif returns.iloc[-1] < 0:
+        signal = -1
+    else:
+        signal = 0  # Neutral signal if no change
+
     logging.info(f"Generated signal: {signal} based on returns: {returns.iloc[-1]}")
     return signal
 
@@ -44,6 +50,10 @@ def get_latest_price(symbol):
 
 def execute_trade(symbol, signal):
     try:
+        if signal == 0:
+            logging.info("Neutral signal received, no trade executed")
+            return
+
         latest_price = get_latest_price(symbol)
         if latest_price is None:
             logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
@@ -67,7 +77,7 @@ def execute_trade(symbol, signal):
                 side='sell',
                 type='trailing_stop',
                 time_in_force='day',
-                trail_percent='0.5'  # 1% trailing stop
+                trail_percent='0.5'  # 0.5% trailing stop
             )
             active_trades.append(order.id)
         logging.info(f"Order submitted: {order}")
