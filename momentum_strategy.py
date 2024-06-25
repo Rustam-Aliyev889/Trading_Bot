@@ -11,8 +11,8 @@ from performance_metrics import initialize_performance_log, log_portfolio_value
 logging.basicConfig(level=logging.INFO, filename='momentum_strategy.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-ALPACA_API_KEY = 'PKQL7W0WXZV1RKPTYRUG'
-ALPACA_SECRET_KEY = 'C37Utl7xvx5SLibmTKveTgnzH0D4CPIfVO62xiwl'
+ALPACA_API_KEY = 'PK6UA3MS4473Y9NFBJRC'
+ALPACA_SECRET_KEY = 'BVclZK6KgCegMeBS6lPLt4Ezi4k6IRhE7OCmzuh3'
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
@@ -21,6 +21,7 @@ conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_
 symbol = 'SPY'
 window = 4
 price_history = []
+active_trades = []
 
 def generate_signals(price_history):
     if len(price_history) < window:
@@ -47,7 +48,7 @@ def execute_trade(symbol, signal):
         if latest_price is None:
             logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
             return
-        
+
         if signal == 1:
             logging.info(f"Executing Buy for {symbol} at {latest_price}")
             order = api.submit_order(
@@ -55,27 +56,21 @@ def execute_trade(symbol, signal):
                 qty=1,
                 side='buy',
                 type='market',
-                time_in_force='day',
-                order_class='bracket',
-                stop_loss={'stop_price': round(latest_price * 0.99, 2)},
-                take_profit={'limit_price': round(latest_price * 1.01, 2)}
+                time_in_force='day'
             )
+            active_trades.append(order.id)
         elif signal == -1:
             logging.info(f"Executing Sell for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
                 qty=1,
                 side='sell',
-                type='market',
-                time_in_force='day'
+                type='trailing_stop',
+                time_in_force='day',
+                trail_percent='0.5'  # 1% trailing stop
             )
+            active_trades.append(order.id)
         logging.info(f"Order submitted: {order}")
-
-        # Wait for the order to be filled and retrieve the filled order
-        filled_order = wait_for_fill(api, order.id)
-
-        # Log the trade to CSV
-        log_trade(filled_order, 'buy' if signal == 1 else 'sell')
 
         # Log portfolio value
         log_portfolio_value()
@@ -134,15 +129,15 @@ if __name__ == "__main__":
         )
         print(f"Manual order response: {test_order}")
         logging.info(f"Manual order response: {test_order}")
-        
+
         # Wait for the order to be filled and retrieve the filled order
         filled_order = wait_for_fill(api, test_order.id)
-        
+
         check_order_status(filled_order.id)
-        
+
         # Log the trade to CSV
         log_trade(filled_order, 'buy')
-        
+
         # Log portfolio value
         log_portfolio_value()
     except Exception as e:
