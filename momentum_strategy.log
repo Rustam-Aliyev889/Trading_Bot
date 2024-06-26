@@ -3436,3 +3436,2427 @@
     'trail_price': None,
     'type': 'market',
     'updated_at': '2024-06-25T18:10:00.680873092Z'})
+2024-06-25 19:16:29,219 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'c573ebca-ac7f-4489-9d50-5cfa63340744',
+    'created_at': '2024-06-25T18:16:28.516588161Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '82e5e481-c96a-4914-af6c-dfd045c90af8',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-25T18:16:28.516588161Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-25T18:16:28.517339181Z'})
+2024-06-25 19:16:30,492 - INFO - Order Status for 82e5e481-c96a-4914-af6c-dfd045c90af8: filled
+2024-06-25 19:16:31,104 - INFO - started stock data stream
+2024-06-25 19:16:31,104 - INFO - starting stock data websocket connection
+2024-06-25 19:16:31,850 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-25 19:16:32,069 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-25 19:17:00,791 - INFO - Received new bar data: 544.23
+2024-06-25 19:18:00,872 - INFO - Received new bar data: 544.27
+2024-06-25 19:19:00,800 - INFO - Received new bar data: 544.195
+2024-06-25 19:20:00,703 - INFO - Received new bar data: 544.185
+2024-06-25 19:20:01,013 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 19:20:01,336 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '102ff12e-8734-4601-868f-8f62f567b128',
+    'created_at': '2024-06-25T18:20:00.637940935Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.27',
+    'id': 'e3025eba-8e38-4d84-a588-febab6506a98',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '538.8273',
+    'submitted_at': '2024-06-25T18:20:00.637940935Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '1',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T18:20:00.638574465Z'})
+2024-06-25 20:08:08,692 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '698a838a-f361-4c1b-bd16-bea45bc584da',
+    'created_at': '2024-06-25T19:08:08.003019836Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'e514b954-0760-4f63-acf7-0761997f33f6',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-25T19:08:08.003019836Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-25T19:08:08.003812646Z'})
+2024-06-25 20:08:09,954 - INFO - Order Status for e514b954-0760-4f63-acf7-0761997f33f6: filled
+2024-06-25 20:08:10,615 - INFO - started stock data stream
+2024-06-25 20:08:10,615 - INFO - starting stock data websocket connection
+2024-06-25 20:08:11,175 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-25 20:08:11,344 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-25 20:11:00,689 - ERROR - error during websocket communication: 't'
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 254, in _run_forever
+    await self._consume()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 130, in _consume
+    await self._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 398, in _dispatch
+    await super()._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 180, in _dispatch
+    await handler(self._cast(msg_type, msg))
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 107, in on_minute_bars
+    'time': bar.t,
+            ^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\entity.py", line 102, in __getattr__
+    val = self._raw[key[0]]
+          ~~~~~~~~~^^^^^^^^
+KeyError: 't'
+2024-06-25 20:12:00,941 - ERROR - error during websocket communication: 't'
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 254, in _run_forever
+    await self._consume()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 130, in _consume
+    await self._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 398, in _dispatch
+    await super()._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 180, in _dispatch
+    await handler(self._cast(msg_type, msg))
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 107, in on_minute_bars
+    'time': bar.t,
+            ^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\entity.py", line 102, in __getattr__
+    val = self._raw[key[0]]
+          ~~~~~~~~~^^^^^^^^
+KeyError: 't'
+2024-06-25 20:14:00,851 - ERROR - error during websocket communication: 't'
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 254, in _run_forever
+    await self._consume()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 130, in _consume
+    await self._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 398, in _dispatch
+    await super()._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 180, in _dispatch
+    await handler(self._cast(msg_type, msg))
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 107, in on_minute_bars
+    'time': bar.t,
+            ^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\entity.py", line 102, in __getattr__
+    val = self._raw[key[0]]
+          ~~~~~~~~~^^^^^^^^
+KeyError: 't'
+2024-06-25 20:25:33,347 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '528d423b-a7a3-4f24-856e-587479970747',
+    'created_at': '2024-06-25T19:25:32.625440641Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '3178bd77-51ff-4279-b574-a4c971987dbe',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-25T19:25:32.625440641Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-25T19:25:32.626253301Z'})
+2024-06-25 20:25:34,618 - INFO - Order Status for 3178bd77-51ff-4279-b574-a4c971987dbe: filled
+2024-06-25 20:25:35,243 - INFO - started stock data stream
+2024-06-25 20:25:35,243 - INFO - starting stock data websocket connection
+2024-06-25 20:25:35,877 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-25 20:25:36,086 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-25 20:26:00,832 - INFO - Received new bar data: 544.785
+2024-06-25 20:27:00,785 - INFO - Received new bar data: 544.73
+2024-06-25 20:28:00,846 - INFO - Received new bar data: 544.73
+2024-06-25 20:29:00,855 - INFO - Received new bar data: 545.04
+2024-06-25 20:29:00,931 - INFO - Generated signal: -1 based on returns: 0.0005690892735850106, Volume RSI: nan, ATR: nan
+2024-06-25 20:29:01,260 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:29:01,601 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '36ebf6b5-16d1-42c7-bfd0-437fb6f9851f',
+    'created_at': '2024-06-25T19:29:00.9148155Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '545.06',
+    'id': '60140a0e-cf45-46bc-bb0a-f75582744f44',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.3347',
+    'submitted_at': '2024-06-25T19:29:00.9148155Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:29:00.915449179Z'})
+2024-06-25 20:30:00,797 - INFO - Received new bar data: 545.08
+2024-06-25 20:30:00,809 - INFO - Generated signal: -1 based on returns: 7.338910905629881e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:30:00,906 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:30:01,001 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '6ef7cfeb-2ee4-41a5-9b5b-0d6a9e6b012b',
+    'created_at': '2024-06-25T19:30:00.315176886Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '545.04',
+    'id': '73741b60-f536-4e43-9d9b-bcc0cd744fef',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.3148',
+    'submitted_at': '2024-06-25T19:30:00.315176886Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:30:00.316315436Z'})
+2024-06-25 20:31:00,805 - INFO - Received new bar data: 544.915
+2024-06-25 20:31:00,818 - INFO - Generated signal: -1 based on returns: -0.00030270785939690015, Volume RSI: nan, ATR: nan
+2024-06-25 20:31:00,932 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:31:01,024 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '54905fa6-1252-4f76-9051-25dcd3e2945b',
+    'created_at': '2024-06-25T19:31:00.339229917Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.8701',
+    'id': '25de67a3-6e0d-43c7-aaeb-bed5b7073826',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.1457495',
+    'submitted_at': '2024-06-25T19:31:00.339229917Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:31:00.339855017Z'})
+2024-06-25 20:32:00,876 - INFO - Received new bar data: 544.725
+2024-06-25 20:32:00,887 - INFO - Generated signal: -1 based on returns: -0.0003486782342199124, Volume RSI: nan, ATR: nan
+2024-06-25 20:32:00,993 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:32:01,097 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '9e843508-8939-48c3-88d4-edd6b5b75ad9',
+    'created_at': '2024-06-25T19:32:00.406650884Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.71',
+    'id': '542ed5c7-122f-4a9e-bdea-174729a8aef0',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.98645',
+    'submitted_at': '2024-06-25T19:32:00.406650884Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:32:00.407383964Z'})
+2024-06-25 20:33:00,881 - INFO - Received new bar data: 544.8
+2024-06-25 20:33:00,920 - INFO - Generated signal: -1 based on returns: 0.00013768415255399624, Volume RSI: nan, ATR: nan
+2024-06-25 20:33:01,019 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:33:01,115 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '2dd56374-97c8-4df8-9402-aaca939d70d7',
+    'created_at': '2024-06-25T19:33:00.431124766Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.79',
+    'id': '8b3f7cb7-1668-49d9-9dc3-5b6b9094bcb1',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.06605',
+    'submitted_at': '2024-06-25T19:33:00.431124766Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:33:00.431777346Z'})
+2024-06-25 20:34:00,790 - INFO - Received new bar data: 544.77
+2024-06-25 20:34:00,805 - INFO - Generated signal: -1 based on returns: -5.506607929506302e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:34:00,907 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:34:01,004 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'f3f01687-6e28-4bd8-9d85-4c65f44b9c3d',
+    'created_at': '2024-06-25T19:34:00.318564099Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.765',
+    'id': '13060ab5-3f15-426e-b91c-e65ca5123d5c',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.041175',
+    'submitted_at': '2024-06-25T19:34:00.318564099Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:34:00.319267469Z'})
+2024-06-25 20:35:00,895 - INFO - Received new bar data: 544.785
+2024-06-25 20:35:00,907 - INFO - Generated signal: -1 based on returns: 2.753455586756992e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:35:01,006 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:35:01,104 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '472f1b5d-ce6e-4f57-8404-d174fd955b66',
+    'created_at': '2024-06-25T19:35:00.419262783Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.79',
+    'id': 'b660ab08-4d8a-47b0-82e3-48de628f8437',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.06605',
+    'submitted_at': '2024-06-25T19:35:00.419262783Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:35:00.419900433Z'})
+2024-06-25 20:36:00,810 - INFO - Received new bar data: 544.735
+2024-06-25 20:36:00,822 - INFO - Generated signal: -1 based on returns: -9.177932578896542e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:36:00,919 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:36:01,015 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '2c9f5101-d6a5-463d-8e3e-b387fb5c52ad',
+    'created_at': '2024-06-25T19:36:00.328912305Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.74',
+    'id': '9e25c224-f836-44bd-9390-ed424619621c',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.0163',
+    'submitted_at': '2024-06-25T19:36:00.328912305Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:36:00.329625184Z'})
+2024-06-25 20:37:00,910 - INFO - Received new bar data: 544.645
+2024-06-25 20:37:00,922 - INFO - Generated signal: -1 based on returns: -0.00016521795001245287, Volume RSI: nan, ATR: nan
+2024-06-25 20:37:01,022 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:37:01,117 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '74f05d66-8e27-4160-aa18-1cd1708c82da',
+    'created_at': '2024-06-25T19:37:00.433641778Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.6499',
+    'id': '1fc528ad-2875-4fa1-8601-9f3562d5b496',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.9266505',
+    'submitted_at': '2024-06-25T19:37:00.433641778Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:37:00.434273728Z'})
+2024-06-25 20:38:00,816 - INFO - Received new bar data: 544.69
+2024-06-25 20:38:00,826 - INFO - Generated signal: -1 based on returns: 8.262262574709744e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:38:00,925 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:38:01,032 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a3016b68-003c-4415-9ceb-f8ae7833f9ce',
+    'created_at': '2024-06-25T19:38:00.34820113Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.72',
+    'id': '25622c6f-dc24-4805-893b-56e5e654374d',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.9964',
+    'submitted_at': '2024-06-25T19:38:00.34820113Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:38:00.34893583Z'})
+2024-06-25 20:39:00,799 - INFO - Received new bar data: 544.8
+2024-06-25 20:39:00,811 - INFO - Generated signal: -1 based on returns: 0.00020194973287535056, Volume RSI: nan, ATR: nan
+2024-06-25 20:39:00,917 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:39:01,015 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'd6ac90a2-680d-487a-a25f-71bc413e77a7',
+    'created_at': '2024-06-25T19:39:00.332439995Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.76',
+    'id': 'a8c676cb-6c6f-4d8d-9675-5fa767b1c34a',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.0362',
+    'submitted_at': '2024-06-25T19:39:00.332439995Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:39:00.333032705Z'})
+2024-06-25 20:40:00,827 - INFO - Received new bar data: 544.75
+2024-06-25 20:40:00,841 - INFO - Generated signal: -1 based on returns: -9.177679882521605e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:40:00,954 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:40:01,050 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'aa549828-f494-44f5-8604-3a6e4d8623b3',
+    'created_at': '2024-06-25T19:40:00.366836274Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.72',
+    'id': 'c164d9da-7a90-451f-9a10-15b64770507d',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.9964',
+    'submitted_at': '2024-06-25T19:40:00.366836274Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:40:00.367408184Z'})
+2024-06-25 20:41:00,834 - INFO - Received new bar data: 544.75
+2024-06-25 20:41:00,845 - INFO - Generated signal: -1 based on returns: 0.0, Volume RSI: nan, ATR: nan
+2024-06-25 20:41:00,945 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:41:01,039 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '4bed406e-bac0-44e6-acbe-1525ee63db19',
+    'created_at': '2024-06-25T19:41:00.354619979Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.78',
+    'id': 'b196a693-0901-41ac-95df-4e95900ee0fd',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.0561',
+    'submitted_at': '2024-06-25T19:41:00.354619979Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:41:00.355256629Z'})
+2024-06-25 20:42:00,789 - INFO - Received new bar data: 544.64
+2024-06-25 20:42:00,802 - INFO - Generated signal: -1 based on returns: -0.00020192748967418073, Volume RSI: nan, ATR: nan
+2024-06-25 20:42:00,900 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:42:00,994 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '4b34150a-95da-4b69-92a0-f4a79119d6fd',
+    'created_at': '2024-06-25T19:42:00.312170787Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.6331',
+    'id': 'd75164cf-b4ff-4cc6-9b10-eb311dab58fd',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.9099345',
+    'submitted_at': '2024-06-25T19:42:00.312170787Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:42:00.312909857Z'})
+2024-06-25 20:43:00,792 - INFO - Received new bar data: 544.59
+2024-06-25 20:43:00,807 - INFO - Generated signal: -1 based on returns: -9.180376028194992e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:43:00,922 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:43:01,015 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '1426244d-7296-49fc-b47c-e00f3c01bf6a',
+    'created_at': '2024-06-25T19:43:00.331977329Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.595',
+    'id': 'f6b84b2c-ecf7-4667-a59a-1205949c1fcc',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.872025',
+    'submitted_at': '2024-06-25T19:43:00.331977329Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:43:00.332684659Z'})
+2024-06-25 20:44:00,855 - INFO - Received new bar data: 544.47
+2024-06-25 20:44:00,869 - INFO - Generated signal: -1 based on returns: -0.00022034925356695378, Volume RSI: nan, ATR: nan
+2024-06-25 20:44:00,968 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:44:01,064 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a54f4f76-bbfd-40ee-9f64-ff30adae8127',
+    'created_at': '2024-06-25T19:44:00.380477867Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.5',
+    'id': '456e3aa3-d758-4988-ade0-0ce0927f60e0',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.7775',
+    'submitted_at': '2024-06-25T19:44:00.380477867Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:44:00.381257587Z'})
+2024-06-25 20:45:00,861 - INFO - Received new bar data: 544.515
+2024-06-25 20:45:00,873 - INFO - Generated signal: -1 based on returns: 8.264918177292024e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:45:00,971 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:45:01,068 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'eeef42eb-d0db-47b1-b17f-28b9059c1053',
+    'created_at': '2024-06-25T19:45:00.38391446Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.52',
+    'id': 'f6d8676c-aaa4-44d6-85b6-81dcfbd747b1',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.7974',
+    'submitted_at': '2024-06-25T19:45:00.38391446Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:45:00.38457505Z'})
+2024-06-25 20:46:00,845 - INFO - Received new bar data: 544.55
+2024-06-25 20:46:00,855 - INFO - Generated signal: -1 based on returns: 6.427738446124209e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:46:00,954 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:46:01,047 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '0ee14ecf-b507-4a61-8ce4-84893dbd0ea0',
+    'created_at': '2024-06-25T19:46:00.365740195Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.53',
+    'id': 'cb382604-fa1f-4370-83f9-40e9ed887cd5',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.80735',
+    'submitted_at': '2024-06-25T19:46:00.365740195Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:46:00.366413545Z'})
+2024-06-25 20:47:00,877 - INFO - Received new bar data: 544.445
+2024-06-25 20:47:00,887 - INFO - Generated signal: -1 based on returns: -0.00019281975943419294, Volume RSI: nan, ATR: nan
+2024-06-25 20:47:00,987 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:47:01,081 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '4332fbee-3633-4fe4-9839-c0860c35552f',
+    'created_at': '2024-06-25T19:47:00.399618102Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.475',
+    'id': '15a55a22-ddaa-4bab-a17e-d855cfdbdfb1',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.752625',
+    'submitted_at': '2024-06-25T19:47:00.399618102Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:47:00.400193622Z'})
+2024-06-25 20:48:00,687 - INFO - Received new bar data: 544.46
+2024-06-25 20:48:00,701 - INFO - Generated signal: -1 based on returns: 2.7550992294900212e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:48:00,800 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:48:00,894 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'c6389feb-f596-47d5-b02d-661cc88036a9',
+    'created_at': '2024-06-25T19:48:00.212037448Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.44',
+    'id': '5eb9837b-f449-4e77-a9a1-c80128acf9bd',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.7178',
+    'submitted_at': '2024-06-25T19:48:00.212037448Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:48:00.212731148Z'})
+2024-06-25 20:49:00,889 - INFO - Received new bar data: 544.555
+2024-06-25 20:49:00,899 - INFO - Generated signal: -1 based on returns: 0.00017448481063797594, Volume RSI: nan, ATR: nan
+2024-06-25 20:49:00,998 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:49:01,097 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'cd85a8aa-87b1-4d95-a1ba-822a27656dc4',
+    'created_at': '2024-06-25T19:49:00.41725143Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.5201',
+    'id': '2a061da3-e724-44ce-975e-d08beb164fd9',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.7974995',
+    'submitted_at': '2024-06-25T19:49:00.41725143Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:49:00.41793652Z'})
+2024-06-25 20:50:00,812 - INFO - Received new bar data: 544.445
+2024-06-25 20:50:00,822 - INFO - Generated signal: -1 based on returns: -0.00020199979800006318, Volume RSI: nan, ATR: nan
+2024-06-25 20:50:00,920 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:50:01,015 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'fbcd548c-62a3-41a9-9f99-7196812e1c08',
+    'created_at': '2024-06-25T19:50:00.335026408Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.33',
+    'id': '555dd1de-426f-4522-ac28-d1045668eb87',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.60835',
+    'submitted_at': '2024-06-25T19:50:00.335026408Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:50:00.336277988Z'})
+2024-06-25 20:51:01,006 - INFO - Received new bar data: 544.485
+2024-06-25 20:51:01,017 - INFO - Generated signal: -1 based on returns: 7.346931278640056e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:51:01,120 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:51:01,215 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '66da9c53-22cd-4693-92d6-9ddc7f21ac5d',
+    'created_at': '2024-06-25T19:51:00.534795221Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.485',
+    'id': '165a892a-6e43-41c4-99ef-48ba645d5bfa',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.762575',
+    'submitted_at': '2024-06-25T19:51:00.534795221Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:51:00.53546308Z'})
+2024-06-25 20:52:00,852 - INFO - Received new bar data: 544.505
+2024-06-25 20:52:00,866 - INFO - Generated signal: -1 based on returns: 3.6731957721469755e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:52:00,964 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:52:01,059 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'c8ffee37-5a48-46a3-9f26-ecce7f48b089',
+    'created_at': '2024-06-25T19:52:00.377040875Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.49',
+    'id': 'd8153cae-a96d-46b7-a752-967fd1036fb0',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.76755',
+    'submitted_at': '2024-06-25T19:52:00.377040875Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:52:00.377938685Z'})
+2024-06-25 20:53:01,121 - INFO - Received new bar data: 544.43
+2024-06-25 20:53:01,133 - INFO - Generated signal: -1 based on returns: -0.00013773978200393167, Volume RSI: nan, ATR: nan
+2024-06-25 20:53:01,240 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:53:01,333 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a6a49036-c98c-48c4-8d17-7e603f5a112d',
+    'created_at': '2024-06-25T19:53:00.652306601Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.472',
+    'id': '556c9a82-e28f-4286-b792-d3e50a31f2c3',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.74964',
+    'submitted_at': '2024-06-25T19:53:00.652306601Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:53:00.652980231Z'})
+2024-06-25 20:54:00,823 - INFO - Received new bar data: 544.535
+2024-06-25 20:54:00,832 - INFO - Generated signal: -1 based on returns: 0.00019286225961101522, Volume RSI: nan, ATR: nan
+2024-06-25 20:54:00,930 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:54:01,028 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'd096f81c-7f1f-4c48-9909-d0b4efced6d3',
+    'created_at': '2024-06-25T19:54:00.345344628Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.5',
+    'id': '41b175aa-8fcb-4a29-8dfe-0c292c07c86d',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.7775',
+    'submitted_at': '2024-06-25T19:54:00.345344628Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:54:00.346240728Z'})
+2024-06-25 20:55:00,828 - INFO - Received new bar data: 544.57
+2024-06-25 20:55:00,838 - INFO - Generated signal: -1 based on returns: 6.427502364414472e-05, Volume RSI: nan, ATR: nan
+2024-06-25 20:55:00,933 - INFO - Executing Sell for SPY at 542.64
+2024-06-25 20:55:01,047 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '66fdb21f-f29b-428b-b170-10997d525c42',
+    'created_at': '2024-06-25T19:55:00.367855686Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.44',
+    'id': '6d76e5e9-05a2-40f6-be17-4ffebea63625',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.7178',
+    'submitted_at': '2024-06-25T19:55:00.367855686Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-25T19:55:00.368577376Z'})
+2024-06-26 15:36:57,142 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'f25ca6ef-d879-4f0f-ab14-c69822aa6cbf',
+    'created_at': '2024-06-26T14:36:56.149383688Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'cca95ca3-6667-45a0-84f0-8a59cdca58ee',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T14:36:56.149383688Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T14:36:56.149825088Z'})
+2024-06-26 15:36:58,414 - INFO - Order Status for cca95ca3-6667-45a0-84f0-8a59cdca58ee: filled
+2024-06-26 15:36:59,160 - INFO - started stock data stream
+2024-06-26 15:36:59,160 - INFO - starting stock data websocket connection
+2024-06-26 15:36:59,813 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-26 15:37:00,031 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-26 15:37:01,115 - INFO - Received new bar data: 544.075, volume: 781
+2024-06-26 15:37:01,490 - ERROR - Error executing trade: cannot access local variable 'order' where it is not associated with a value
+2024-06-26 15:39:12,520 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'b4b4e7ac-fcf5-4b70-986f-31d52a5c4170',
+    'created_at': '2024-06-26T14:39:11.530164129Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '11951a94-cb87-4977-a768-767571862cc9',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T14:39:11.530164129Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T14:39:11.530983639Z'})
+2024-06-26 15:39:13,814 - INFO - Order Status for 11951a94-cb87-4977-a768-767571862cc9: filled
+2024-06-26 15:39:14,470 - INFO - started stock data stream
+2024-06-26 15:39:14,471 - INFO - starting stock data websocket connection
+2024-06-26 15:39:14,982 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-26 15:39:15,192 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-26 15:40:01,077 - INFO - Received new bar data: 543.785, volume: 2314
+2024-06-26 15:41:01,086 - INFO - Received new bar data: 544.02, volume: 174
+2024-06-26 15:42:01,191 - INFO - Received new bar data: 543.925, volume: 215
+2024-06-26 15:43:01,095 - INFO - Received new bar data: 543.855, volume: 200
+2024-06-26 15:43:01,132 - ERROR - error during websocket communication: 'high'
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 254, in _run_forever
+    await self._consume()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 130, in _consume
+    await self._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 398, in _dispatch
+    await super()._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 180, in _dispatch
+    await handler(self._cast(msg_type, msg))
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 103, in on_minute_bars
+    signal = generate_signals(price_history, volume_history)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\indicators.py", line 35, in generate_signals
+    atr = calculate_atr(data, window)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\indicators.py", line 17, in calculate_atr
+    high_low = df['high'] - df['low']
+               ~~^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'high'
+2024-06-26 15:44:01,204 - INFO - Received new bar data: 544.095, volume: 1223
+2024-06-26 15:44:01,211 - ERROR - error during websocket communication: 'high'
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 254, in _run_forever
+    await self._consume()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 130, in _consume
+    await self._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 398, in _dispatch
+    await super()._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 180, in _dispatch
+    await handler(self._cast(msg_type, msg))
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 103, in on_minute_bars
+    signal = generate_signals(price_history, volume_history)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\indicators.py", line 35, in generate_signals
+    atr = calculate_atr(data, window)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\indicators.py", line 17, in calculate_atr
+    high_low = df['high'] - df['low']
+               ~~^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'high'
+2024-06-26 15:45:01,106 - INFO - Received new bar data: 544.085, volume: 209
+2024-06-26 15:45:01,111 - ERROR - error during websocket communication: 'high'
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 254, in _run_forever
+    await self._consume()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 130, in _consume
+    await self._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 398, in _dispatch
+    await super()._dispatch(msg)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 180, in _dispatch
+    await handler(self._cast(msg_type, msg))
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 103, in on_minute_bars
+    except Exception as e:
+             ^^^^^^^^^^^^^^
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\indicators.py", line 35, in generate_signals
+    atr = calculate_atr(pd.DataFrame({'high': data, 'low': data, 'close': data}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\indicators.py", line 17, in calculate_atr
+    high_close = np.abs(df['high'] - df['close'].shift())
+               ^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'high'
+2024-06-26 15:45:16,699 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '3218bdc1-49cb-427b-8ad1-d9f6a77cd671',
+    'created_at': '2024-06-26T14:45:15.711664022Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '2f27c0af-96b4-4d42-bb3b-6003b550c56e',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T14:45:15.711664022Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T14:45:15.712412882Z'})
+2024-06-26 15:45:17,970 - INFO - Order Status for 2f27c0af-96b4-4d42-bb3b-6003b550c56e: filled
+2024-06-26 15:45:18,683 - INFO - started stock data stream
+2024-06-26 15:45:18,684 - INFO - starting stock data websocket connection
+2024-06-26 15:45:19,177 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-26 15:45:19,418 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-26 15:46:01,116 - INFO - Received new bar data: 544.095
+2024-06-26 15:47:01,085 - INFO - Received new bar data: 544.21
+2024-06-26 15:48:01,081 - INFO - Received new bar data: 544.395
+2024-06-26 15:49:01,081 - INFO - Received new bar data: 544.35
+2024-06-26 15:49:01,113 - INFO - Generated signal: -1 based on returns: -8.26605681535364e-05, Volume RSI: nan, ATR: nan
+2024-06-26 15:49:01,427 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:49:01,743 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a007c6c3-7ea4-4daa-84e9-6008fef3ef46',
+    'created_at': '2024-06-26T14:49:00.756316366Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.23',
+    'id': 'b9d8c875-ceb1-43fa-9148-804ecc31d4f7',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.50885',
+    'submitted_at': '2024-06-26T14:49:00.756316366Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T14:49:00.757033026Z'})
+2024-06-26 15:50:01,041 - INFO - Received new bar data: 544.27
+2024-06-26 15:50:01,052 - INFO - Generated signal: -1 based on returns: -0.00014696426931204432, Volume RSI: nan, ATR: nan
+2024-06-26 15:50:01,152 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:50:01,248 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'feb8f679-1f30-457f-91dd-bee030564c1c',
+    'created_at': '2024-06-26T14:50:00.260744352Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.3005',
+    'id': 'fe2193f4-74fb-4105-b631-fc4b7fd6d531',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.5789975',
+    'submitted_at': '2024-06-26T14:50:00.260744352Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T14:50:00.261399092Z'})
+2024-06-26 15:51:01,108 - INFO - Received new bar data: 544.39
+2024-06-26 15:51:01,113 - INFO - Generated signal: -1 based on returns: 0.00022047880647479978, Volume RSI: nan, ATR: nan
+2024-06-26 15:51:01,223 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:51:01,323 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '19cc0c45-0084-4a2a-8c91-ef60a16411af',
+    'created_at': '2024-06-26T14:51:00.336184618Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.42',
+    'id': '653d2369-02e4-441a-83ee-ee9dc88b2593',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.6979',
+    'submitted_at': '2024-06-26T14:51:00.336184618Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T14:51:00.336808958Z'})
+2024-06-26 15:52:01,053 - INFO - Received new bar data: 544.395
+2024-06-26 15:52:01,066 - INFO - Generated signal: -1 based on returns: 9.18459192855714e-06, Volume RSI: nan, ATR: nan
+2024-06-26 15:52:01,181 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:52:01,274 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:53:01,076 - INFO - Received new bar data: 544.125
+2024-06-26 15:53:01,082 - INFO - Generated signal: -1 based on returns: -0.0004959634089217735, Volume RSI: nan, ATR: nan
+2024-06-26 15:53:01,180 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:53:01,269 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:54:01,199 - INFO - Received new bar data: 544.14
+2024-06-26 15:54:01,208 - INFO - Generated signal: -1 based on returns: 2.7567195037825343e-05, Volume RSI: nan, ATR: nan
+2024-06-26 15:54:01,308 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:54:01,405 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:55:01,279 - INFO - Received new bar data: 544.48
+2024-06-26 15:55:01,288 - INFO - Generated signal: -1 based on returns: 0.000624839195795257, Volume RSI: nan, ATR: nan
+2024-06-26 15:55:01,383 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:55:01,477 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:56:01,081 - INFO - Received new bar data: 544.49
+2024-06-26 15:56:01,092 - INFO - Generated signal: -1 based on returns: 1.8366147516823972e-05, Volume RSI: nan, ATR: nan
+2024-06-26 15:56:01,189 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:56:01,293 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:57:01,187 - INFO - Received new bar data: 544.515
+2024-06-26 15:57:01,196 - INFO - Generated signal: -1 based on returns: 4.5914525519163973e-05, Volume RSI: nan, ATR: nan
+2024-06-26 15:57:01,293 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:57:01,389 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:58:01,094 - INFO - Received new bar data: 544.525
+2024-06-26 15:58:01,103 - INFO - Generated signal: -1 based on returns: 1.8364966988926312e-05, Volume RSI: nan, ATR: nan
+2024-06-26 15:58:01,201 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:58:01,293 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 15:59:00,986 - INFO - Received new bar data: 544.425
+2024-06-26 15:59:00,993 - INFO - Generated signal: -1 based on returns: -0.00018364629723155446, Volume RSI: nan, ATR: nan
+2024-06-26 15:59:01,093 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 15:59:01,190 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 16:00:01,109 - INFO - Received new bar data: 544.18
+2024-06-26 16:00:01,119 - INFO - Generated signal: -1 based on returns: -0.0004500160720025681, Volume RSI: nan, ATR: nan
+2024-06-26 16:00:01,216 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:00:01,309 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 16:01:01,016 - INFO - Received new bar data: 544.165
+2024-06-26 16:01:01,025 - INFO - Generated signal: -1 based on returns: -2.7564408835334397e-05, Volume RSI: nan, ATR: nan
+2024-06-26 16:01:01,122 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:01:01,214 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 16:04:57,628 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '89f08597-22d5-49f2-ad53-b45aaba4eae2',
+    'created_at': '2024-06-26T15:04:56.643115167Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '720344be-7078-460d-acb0-29cd6e55afac',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:04:56.643115167Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:04:56.643934027Z'})
+2024-06-26 16:04:58,919 - INFO - Order Status for 720344be-7078-460d-acb0-29cd6e55afac: filled
+2024-06-26 16:04:59,576 - INFO - started stock data stream
+2024-06-26 16:04:59,577 - INFO - starting stock data websocket connection
+2024-06-26 16:05:00,352 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-26 16:05:00,624 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-26 16:05:01,133 - INFO - Received new bar data: 543.99
+2024-06-26 16:05:01,133 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:06:01,078 - INFO - Received new bar data: 544.175
+2024-06-26 16:06:01,079 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:07:01,159 - INFO - Received new bar data: 543.935
+2024-06-26 16:07:01,160 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:08:01,166 - INFO - Received new bar data: 543.945
+2024-06-26 16:08:01,171 - INFO - Generated signal: 1 based on returns: 1.8384549624661517e-05
+2024-06-26 16:08:01,477 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:08:01,823 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a6410811-e33c-4e95-9e87-7c03a5af9c76',
+    'created_at': '2024-06-26T15:08:00.838305034Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'd3d44730-5592-42b8-ae39-3f29bb74c00f',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:08:00.838305034Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:08:00.839084554Z'})
+2024-06-26 16:09:01,172 - INFO - Received new bar data: 543.935
+2024-06-26 16:09:01,177 - INFO - Generated signal: -1 based on returns: -1.8384211639244086e-05
+2024-06-26 16:09:01,279 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:09:01,399 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '4b0ae2c4-5ef0-47a2-89bd-8a49c2d4a1bb',
+    'created_at': '2024-06-26T15:09:00.392567063Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '543.97',
+    'id': '83b8cf01-66f3-495e-9b8b-cc67579d725e',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.25015',
+    'submitted_at': '2024-06-26T15:09:00.392567063Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T15:09:00.393189143Z'})
+2024-06-26 16:10:01,235 - INFO - Received new bar data: 543.73
+2024-06-26 16:10:01,239 - INFO - Generated signal: -1 based on returns: -0.0003768832673020084
+2024-06-26 16:10:01,351 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:10:01,511 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '75716c18-2b51-4f1c-ab78-785181e96508',
+    'created_at': '2024-06-26T15:10:00.527197309Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '543.66',
+    'id': '90ac8ab6-2586-4311-9e5e-18638b968c86',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '540.9417',
+    'submitted_at': '2024-06-26T15:10:00.527197309Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T15:10:00.527829179Z'})
+2024-06-26 16:11:01,549 - INFO - Received new bar data: 543.53
+2024-06-26 16:11:01,552 - INFO - Generated signal: -1 based on returns: -0.00036782962131953756
+2024-06-26 16:11:01,655 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:11:01,755 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 16:12:01,246 - INFO - Received new bar data: 543.255
+2024-06-26 16:12:01,250 - INFO - Generated signal: -1 based on returns: -0.0005059518333854207
+2024-06-26 16:12:01,366 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:12:01,463 - ERROR - API Error executing trade: insufficient qty available for order (requested: 1, available: 0)
+2024-06-26 16:13:01,079 - INFO - Received new bar data: 543.29
+2024-06-26 16:13:01,080 - INFO - Generated signal: 1 based on returns: 6.442646639226446e-05
+2024-06-26 16:13:01,171 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:13:01,264 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '0fa2f75e-ef1f-44fa-b176-2fec56f20d24',
+    'created_at': '2024-06-26T15:13:00.283127087Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '78fc79a6-0bd5-49c4-849a-be934d548c69',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:13:00.283127087Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:13:00.283977237Z'})
+2024-06-26 16:14:01,094 - INFO - Received new bar data: 543.3
+2024-06-26 16:14:01,095 - INFO - Generated signal: 1 based on returns: 1.8406375968726962e-05
+2024-06-26 16:14:01,186 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:14:01,278 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '365f480e-51ae-4294-8eb4-fd80f5a5b890',
+    'created_at': '2024-06-26T15:14:00.298179044Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '54c710dd-cc02-4692-a861-1b7697daf498',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:14:00.298179044Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:14:00.298912894Z'})
+2024-06-26 16:20:12,017 - INFO - Manual order response: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '003df85c-f130-4070-ac90-6ab83e3297a2',
+    'created_at': '2024-06-26T15:20:11.034388081Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '991c8c99-c7c4-49da-98cd-c2f7a0262440',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:20:11.034388081Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:20:11.035187651Z'})
+2024-06-26 16:20:13,300 - INFO - Order Status for 991c8c99-c7c4-49da-98cd-c2f7a0262440: filled
+2024-06-26 16:20:13,929 - INFO - started stock data stream
+2024-06-26 16:20:13,930 - INFO - starting stock data websocket connection
+2024-06-26 16:20:14,451 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-06-26 16:20:14,714 - INFO - subscribed to trades: [], quotes: [], bars: ['SPY'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-06-26 16:21:01,308 - INFO - Received new bar data: 544.09
+2024-06-26 16:21:01,309 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:22:01,109 - INFO - Received new bar data: 544.05
+2024-06-26 16:22:01,110 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:23:00,985 - INFO - Received new bar data: 544.03
+2024-06-26 16:23:00,986 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:26:01,077 - INFO - Received new bar data: 544.1
+2024-06-26 16:26:01,145 - INFO - Generated signal: 0 based on returns: 0.00012866937485078722, volume_rsi: 8.938547486033528, atr: nan
+2024-06-26 16:26:01,145 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:27:01,091 - INFO - Received new bar data: 544.13
+2024-06-26 16:27:01,105 - INFO - Generated signal: 0 based on returns: 5.513692335967768e-05, volume_rsi: 15.920398009950247, atr: nan
+2024-06-26 16:27:01,105 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:28:01,078 - INFO - Received new bar data: 544.205
+2024-06-26 16:28:01,088 - INFO - Generated signal: 1 based on returns: 0.00013783470861761238, volume_rsi: 97.59562841530055, atr: nan
+2024-06-26 16:28:01,438 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:28:02,115 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '88005723-74c7-4476-abbd-6b509475f8c9',
+    'created_at': '2024-06-26T15:28:01.136958125Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '89ac66d3-5438-4775-8050-7f9bcb9172dc',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:28:01.136958125Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:28:01.137726345Z'})
+2024-06-26 16:29:01,066 - INFO - Received new bar data: 544.195
+2024-06-26 16:29:01,075 - INFO - Generated signal: 0 based on returns: -1.8375428377126468e-05, volume_rsi: 52.372262773722625, atr: nan
+2024-06-26 16:29:01,075 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:30:01,114 - INFO - Received new bar data: 544.025
+2024-06-26 16:30:01,127 - INFO - Generated signal: 0 based on returns: -0.00031238802267585797, volume_rsi: 50.20408163265306, atr: nan
+2024-06-26 16:30:01,128 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:31:01,119 - INFO - Received new bar data: 543.905
+2024-06-26 16:31:01,132 - INFO - Generated signal: -1 based on returns: -0.0002205780984330108, volume_rsi: 0.46620046620046196, atr: nan
+2024-06-26 16:31:01,442 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:31:01,750 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '880f1e3b-dc72-404a-90b3-9cf4666d24e2',
+    'created_at': '2024-06-26T15:31:00.773792403Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '543.93',
+    'id': '39cf1dff-9b7f-4ca8-9f1b-9620f172bd78',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.21035',
+    'submitted_at': '2024-06-26T15:31:00.773792403Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T15:31:00.774411493Z'})
+2024-06-26 16:33:01,094 - INFO - Received new bar data: 543.83
+2024-06-26 16:33:01,104 - INFO - Generated signal: 0 based on returns: -0.0001378917274155178, volume_rsi: 54.41176470588235, atr: nan
+2024-06-26 16:33:01,105 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:34:01,086 - INFO - Received new bar data: 543.8
+2024-06-26 16:34:01,098 - INFO - Generated signal: 0 based on returns: -5.516429766672104e-05, volume_rsi: 100.0, atr: nan
+2024-06-26 16:34:01,099 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:37:01,005 - INFO - Received new bar data: 543.885
+2024-06-26 16:37:01,019 - INFO - Generated signal: 1 based on returns: 0.00015630746598027656, volume_rsi: 60.10362694300518, atr: nan
+2024-06-26 16:37:01,453 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:37:02,030 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '3d5db897-698b-47ad-aa12-246b8f108a59',
+    'created_at': '2024-06-26T15:37:00.920421259Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'd62823bf-feff-42ec-bb80-814566fb8174',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:37:00.920421259Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:37:00.921225059Z'})
+2024-06-26 16:38:01,248 - INFO - Received new bar data: 543.945
+2024-06-26 16:38:01,264 - INFO - Generated signal: 0 based on returns: 0.00011031743842915276, volume_rsi: 33.06878306878308, atr: nan
+2024-06-26 16:38:01,264 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:39:01,117 - INFO - Received new bar data: 544.05
+2024-06-26 16:39:01,129 - INFO - Generated signal: 1 based on returns: 0.00019303422220984245, volume_rsi: 67.64705882352942, atr: nan
+2024-06-26 16:39:01,463 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:39:01,769 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'cdeead72-b35e-4162-b8c7-ace001fee51a',
+    'created_at': '2024-06-26T15:39:00.790077122Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '44f67fb7-f88b-43aa-affa-f073b6b2e3c2',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:39:00.790077122Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:39:00.790857072Z'})
+2024-06-26 16:41:01,233 - INFO - Received new bar data: 544.06
+2024-06-26 16:41:01,248 - INFO - Generated signal: 1 based on returns: 1.838066354187262e-05, volume_rsi: 52.066929133858274, atr: nan
+2024-06-26 16:41:01,584 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:41:01,879 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'a6e9afb1-ce20-4178-a033-e3292168f8ac',
+    'created_at': '2024-06-26T15:41:00.905126935Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '80f8c9bf-39e2-49aa-bd40-24c225078674',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:41:00.905126935Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:41:00.905948405Z'})
+2024-06-26 16:42:01,139 - INFO - Received new bar data: 544.025
+2024-06-26 16:42:01,152 - INFO - Generated signal: 0 based on returns: -6.433113994774864e-05, volume_rsi: 58.054054054054056, atr: nan
+2024-06-26 16:42:01,153 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:44:01,070 - INFO - Received new bar data: 544.09
+2024-06-26 16:44:01,081 - INFO - Generated signal: 0 based on returns: 0.00011947980331794561, volume_rsi: 1.4842300556586139, atr: nan
+2024-06-26 16:44:01,082 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:45:01,209 - INFO - Received new bar data: 544.155
+2024-06-26 16:45:01,229 - INFO - Generated signal: 1 based on returns: 0.00011946552959973822, volume_rsi: 74.95621716287215, atr: nan
+2024-06-26 16:45:01,836 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:45:02,193 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '0fa3c25a-e955-4862-b0d8-4fbc1f88a0a3',
+    'created_at': '2024-06-26T15:45:01.215458501Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'f86353e3-4cf1-4269-a9c6-4b6c5f344db8',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:45:01.215458501Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:45:01.216245131Z'})
+2024-06-26 16:46:01,165 - INFO - Received new bar data: 544.36
+2024-06-26 16:46:01,178 - INFO - Generated signal: 1 based on returns: 0.00037673089469003607, volume_rsi: 79.3053545586107, atr: nan
+2024-06-26 16:46:01,313 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:46:01,411 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'cb3fbb41-0b40-45ab-a489-e68f2dca45e5',
+    'created_at': '2024-06-26T15:46:00.435077671Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '2adf1528-a80c-491b-99ba-4270adbecda1',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:46:00.435077671Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:46:00.435863051Z'})
+2024-06-26 16:47:01,102 - INFO - Received new bar data: 544.36
+2024-06-26 16:47:01,114 - INFO - Generated signal: 0 based on returns: 0.0, volume_rsi: 64.77541371158392, atr: nan
+2024-06-26 16:47:01,114 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:48:01,191 - INFO - Received new bar data: 544.4
+2024-06-26 16:48:01,200 - INFO - Generated signal: 0 based on returns: 7.348078477464881e-05, volume_rsi: 41.10671936758893, atr: nan
+2024-06-26 16:48:01,201 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:49:01,192 - INFO - Received new bar data: 544.42
+2024-06-26 16:49:01,198 - INFO - Generated signal: 0 based on returns: 3.67376928729346e-05, volume_rsi: 33.630289532293986, atr: nan
+2024-06-26 16:49:01,199 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:50:00,996 - INFO - Received new bar data: 544.385
+2024-06-26 16:50:01,007 - INFO - Generated signal: -1 based on returns: -6.428860071261422e-05, volume_rsi: 29.84189723320158, atr: nan
+2024-06-26 16:50:01,443 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:50:02,181 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'e4ae59ce-208e-449d-818c-816a8b14d24e',
+    'created_at': '2024-06-26T15:50:01.073832191Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '544.63',
+    'id': '9605a603-588d-4f13-9be6-1bfbcc7a66d8',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '541.90685',
+    'submitted_at': '2024-06-26T15:50:01.073832191Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T15:50:01.074463471Z'})
+2024-06-26 16:51:01,096 - INFO - Received new bar data: 544.76
+2024-06-26 16:51:01,104 - INFO - Generated signal: 1 based on returns: 0.0006888507214564132, volume_rsi: 82.5809617271835, atr: nan
+2024-06-26 16:51:01,201 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:51:01,312 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'b1f07a2f-1ff4-445f-a1fc-6224903f5c37',
+    'created_at': '2024-06-26T15:51:00.334155627Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'a47ff125-8147-4908-9a39-bacaddce094f',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:51:00.334155627Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:51:00.334866977Z'})
+2024-06-26 16:52:01,102 - INFO - Received new bar data: 544.8
+2024-06-26 16:52:01,111 - INFO - Generated signal: 1 based on returns: 7.34268301636476e-05, volume_rsi: 88.62544056392181, atr: nan
+2024-06-26 16:52:01,216 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:52:01,318 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'efc3ad56-20f2-48e6-8570-0b99a229fcbb',
+    'created_at': '2024-06-26T15:52:00.342311848Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'b4d57730-8f77-415a-81c4-d131ada60e57',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:52:00.342311848Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:52:00.343140178Z'})
+2024-06-26 16:53:01,004 - INFO - Received new bar data: 544.96
+2024-06-26 16:53:01,015 - INFO - Generated signal: 1 based on returns: 0.00029368575624100224, volume_rsi: 53.49062076967704, atr: nan
+2024-06-26 16:53:01,138 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:53:01,253 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'b45c62cb-2d84-4622-9b95-ab82a2d229ae',
+    'created_at': '2024-06-26T15:53:00.267226194Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': '7cc82c70-fb4f-4805-8201-269e79e52cee',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:53:00.267226194Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:53:00.268013324Z'})
+2024-06-26 16:54:01,116 - INFO - Received new bar data: 544.98
+2024-06-26 16:54:01,124 - INFO - Generated signal: 0 based on returns: 3.669994127997178e-05, volume_rsi: 29.453802960694233, atr: nan
+2024-06-26 16:54:01,124 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:55:01,120 - INFO - Received new bar data: 545.37
+2024-06-26 16:55:01,129 - INFO - Generated signal: 1 based on returns: 0.0007156225916546965, volume_rsi: 61.65371809100999, atr: nan
+2024-06-26 16:55:01,454 - INFO - Executing Buy for SPY at 546.32
+2024-06-26 16:55:01,813 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': 'b34d6cdd-5c1a-4c68-985a-66d61b5408db',
+    'created_at': '2024-06-26T15:55:00.839929049Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': None,
+    'id': 'b4add5e1-8290-4bb8-ac27-dc1f6167b50c',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'market',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'buy',
+    'source': None,
+    'status': 'pending_new',
+    'stop_price': None,
+    'submitted_at': '2024-06-26T15:55:00.839929049Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': None,
+    'trail_price': None,
+    'type': 'market',
+    'updated_at': '2024-06-26T15:55:00.840684759Z'})
+2024-06-26 16:56:01,025 - INFO - Received new bar data: 545.26
+2024-06-26 16:56:01,033 - INFO - Generated signal: 0 based on returns: -0.00020169792984581214, volume_rsi: 50.94577553593947, atr: nan
+2024-06-26 16:56:01,033 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:57:01,239 - INFO - Received new bar data: 545.215
+2024-06-26 16:57:01,248 - INFO - Generated signal: 0 based on returns: -8.25294354985795e-05, volume_rsi: 56.97980684811238, atr: nan
+2024-06-26 16:57:01,248 - INFO - Neutral signal received, no trade executed
+2024-06-26 16:59:01,212 - INFO - Received new bar data: 545.17
+2024-06-26 16:59:01,224 - INFO - Generated signal: -1 based on returns: -8.253624716869634e-05, volume_rsi: 12.50208925288318, atr: nan
+2024-06-26 16:59:01,546 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 16:59:01,892 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '00c5a8b4-b7a0-44cb-9bef-9b335c5936aa',
+    'created_at': '2024-06-26T15:59:00.905550101Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '545.1',
+    'id': '6ab1b789-30c8-4694-9bcc-3338de6ebbd6',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.3745',
+    'submitted_at': '2024-06-26T15:59:00.905550101Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T15:59:00.906207211Z'})
+2024-06-26 17:00:01,117 - INFO - Received new bar data: 545.24
+2024-06-26 17:00:01,135 - INFO - Generated signal: 0 based on returns: 0.00012840031549798958, volume_rsi: 37.05122067975108, atr: nan
+2024-06-26 17:00:01,135 - INFO - Neutral signal received, no trade executed
+2024-06-26 17:01:01,343 - INFO - Received new bar data: 545.16
+2024-06-26 17:01:01,359 - INFO - Generated signal: -1 based on returns: -0.00014672437825546947, volume_rsi: 41.163310961968676, atr: nan
+2024-06-26 17:01:01,798 - INFO - Executing Sell for SPY at 546.32
+2024-06-26 17:01:02,127 - INFO - Order submitted: Order({   'asset_class': 'us_equity',
+    'asset_id': 'b28f4066-5c6d-479b-a2af-85dc1a8f16fb',
+    'canceled_at': None,
+    'client_order_id': '6a249e2e-afc6-432b-a2c6-821382d73c18',
+    'created_at': '2024-06-26T16:01:01.154076435Z',
+    'expired_at': None,
+    'extended_hours': False,
+    'failed_at': None,
+    'filled_at': None,
+    'filled_avg_price': None,
+    'filled_qty': '0',
+    'hwm': '545.09',
+    'id': '7f6f65d4-4ded-4b7d-88ea-edb75111f302',
+    'legs': None,
+    'limit_price': None,
+    'notional': None,
+    'order_class': '',
+    'order_type': 'trailing_stop',
+    'qty': '1',
+    'replaced_at': None,
+    'replaced_by': None,
+    'replaces': None,
+    'side': 'sell',
+    'source': None,
+    'status': 'new',
+    'stop_price': '542.36455',
+    'submitted_at': '2024-06-26T16:01:01.154076435Z',
+    'subtag': None,
+    'symbol': 'SPY',
+    'time_in_force': 'day',
+    'trail_percent': '0.5',
+    'trail_price': None,
+    'type': 'trailing_stop',
+    'updated_at': '2024-06-26T16:01:01.154642224Z'})
+2024-06-26 17:02:01,045 - INFO - Received new bar data: 545.06
+2024-06-26 17:02:01,056 - INFO - Generated signal: 0 based on returns: -0.0001834323868222798, volume_rsi: 50.08165487207403, atr: nan
+2024-06-26 17:02:01,056 - INFO - Neutral signal received, no trade executed

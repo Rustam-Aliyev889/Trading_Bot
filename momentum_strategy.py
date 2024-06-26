@@ -6,6 +6,7 @@ import asyncio
 import logging
 from trade_log import initialize_trade_log, log_trade, wait_for_fill
 from performance_metrics import initialize_performance_log, log_portfolio_value
+from indicators import calculate_volume_rsi, calculate_atr
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='momentum_strategy.log', filemode='a',
@@ -21,22 +22,33 @@ conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_
 symbol = 'SPY'
 window = 4
 price_history = []
+volume_history = []
+high_history = []
+low_history = []
 active_trades = []
 
-def generate_signals(price_history):
-    if len(price_history) < window:
+def generate_signals(price_history, volume_history, high_history, low_history):
+    if len(price_history) < window or len(volume_history) < window:
         return 0  # Neutral signal if not enough data
 
-    data = pd.Series(price_history)
-    returns = data.pct_change()
-    if returns.iloc[-1] > 0:
+    data = pd.DataFrame({
+        'price': price_history,
+        'volume': volume_history,
+        'high': high_history,
+        'low': low_history
+    })
+    data['returns'] = data['price'].pct_change()
+    data['volume_rsi'] = calculate_volume_rsi(data['volume'], window)
+    data['atr'] = calculate_atr(data['high'], data['low'], data['price'], window)
+
+    if data['returns'].iloc[-1] > 0 and data['volume_rsi'].iloc[-1] > 50:
         signal = 1
-    elif returns.iloc[-1] < 0:
+    elif data['returns'].iloc[-1] < 0 and data['volume_rsi'].iloc[-1] < 50:
         signal = -1
     else:
-        signal = 0  # Neutral signal if no change
+        signal = 0  # Neutral signal
 
-    logging.info(f"Generated signal: {signal} based on returns: {returns.iloc[-1]}")
+    logging.info(f"Generated signal: {signal} based on returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}")
     return signal
 
 def get_latest_price(symbol):
@@ -99,12 +111,18 @@ def check_order_status(order_id):
 
 async def on_minute_bars(bar):
     price_history.append(bar.close)
+    volume_history.append(bar.volume)
+    high_history.append(bar.high)
+    low_history.append(bar.low)
     logging.info(f"Received new bar data: {bar.close}")
 
     if len(price_history) > window:
         price_history.pop(0)
+        volume_history.pop(0)
+        high_history.pop(0)
+        low_history.pop(0)
 
-    signal = generate_signals(price_history)
+    signal = generate_signals(price_history, volume_history, high_history, low_history)
     if signal is not None:
         execute_trade(symbol, signal)
 
