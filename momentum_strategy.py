@@ -19,12 +19,12 @@ BASE_URL = 'https://paper-api.alpaca.markets'
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
 conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_feed='iex')
 
-symbol = 'SPY'
+symbols = ['AAPL', 'GOOG', 'AMZN', 'MSFT', 'META', 'TSLA', 'NFLX', 'NVDA', 'V', 'PYPL']
 window = 4
-price_history = []
-volume_history = []
-high_history = []
-low_history = []
+price_histories = {symbol: [] for symbol in symbols}
+volume_histories = {symbol: [] for symbol in symbols}
+high_histories = {symbol: [] for symbol in symbols}
+low_histories = {symbol: [] for symbol in symbols}
 active_trades = []
 
 def generate_signals(price_history, volume_history, high_history, low_history):
@@ -63,7 +63,7 @@ def get_latest_price(symbol):
 def execute_trade(symbol, signal):
     try:
         if signal == 0:
-            logging.info("Neutral signal received, no trade executed")
+            logging.info(f"Neutral signal received for {symbol}, no trade executed")
             return
 
         latest_price = get_latest_price(symbol)
@@ -71,11 +71,14 @@ def execute_trade(symbol, signal):
             logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
             return
 
+        # fractional quantity based on $10 allocation
+        quantity = round(10 / latest_price, 6)  # Round to 6 decimal places for fractional trading
+
         if signal == 1:
             logging.info(f"Executing Buy for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
-                qty=1,
+                qty=quantity,
                 side='buy',
                 type='market',
                 time_in_force='day'
@@ -85,11 +88,10 @@ def execute_trade(symbol, signal):
             logging.info(f"Executing Sell for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
-                qty=1,
+                qty=quantity,
                 side='sell',
-                type='trailing_stop',
-                time_in_force='day',
-                trail_percent='0.5'  # 0.5% trailing stop
+                type='market',
+                time_in_force='day'
             )
             active_trades.append(order.id)
         logging.info(f"Order submitted: {order}")
@@ -98,9 +100,9 @@ def execute_trade(symbol, signal):
         log_portfolio_value()
 
     except tradeapi.rest.APIError as e:
-        logging.error(f"API Error executing trade: {e}")
+        logging.error(f"API Error executing trade for {symbol}: {e}")
     except Exception as e:
-        logging.error(f"Error executing trade: {e}")
+        logging.error(f"Error executing trade for {symbol}: {e}")
 
 def check_order_status(order_id):
     try:
@@ -110,26 +112,28 @@ def check_order_status(order_id):
         logging.error(f"Error checking order status for {order_id}: {e}")
 
 async def on_minute_bars(bar):
-    price_history.append(bar.close)
-    volume_history.append(bar.volume)
-    high_history.append(bar.high)
-    low_history.append(bar.low)
-    logging.info(f"Received new bar data: {bar.close}")
+    symbol = bar.symbol
+    price_histories[symbol].append(bar.close)
+    volume_histories[symbol].append(bar.volume)
+    high_histories[symbol].append(bar.high)
+    low_histories[symbol].append(bar.low)
+    logging.info(f"Received new bar data for {symbol}: {bar.close}")
 
-    if len(price_history) > window:
-        price_history.pop(0)
-        volume_history.pop(0)
-        high_history.pop(0)
-        low_history.pop(0)
+    if len(price_histories[symbol]) > window:
+        price_histories[symbol].pop(0)
+        volume_histories[symbol].pop(0)
+        high_histories[symbol].pop(0)
+        low_histories[symbol].pop(0)
 
-    signal = generate_signals(price_history, volume_history, high_history, low_history)
+    signal = generate_signals(price_histories[symbol], volume_histories[symbol], high_histories[symbol], low_histories[symbol])
     if signal is not None:
         execute_trade(symbol, signal)
 
 async def run_momentum_strategy():
     try:
-        # Subscribe to minute bars
-        conn.subscribe_bars(on_minute_bars, symbol)
+        # Subscribe to minute bars for each symbol individually
+        for symbol in symbols:
+            conn.subscribe_bars(on_minute_bars, symbol)
 
         # Start the WebSocket connection
         await conn._run_forever()
@@ -144,33 +148,6 @@ if __name__ == "__main__":
     initialize_performance_log()
     loop = asyncio.get_event_loop()
     loop.create_task(main())
-
-    # Manually test order submission
-    try:
-        print("Testing manual order submission...")
-        test_order = api.submit_order(
-            symbol='SPY',
-            qty=1,
-            side='buy',
-            type='market',
-            time_in_force='day'
-        )
-        print(f"Manual order response: {test_order}")
-        logging.info(f"Manual order response: {test_order}")
-
-        # Wait for the order to be filled and retrieve the filled order
-        filled_order = wait_for_fill(api, test_order.id)
-
-        check_order_status(filled_order.id)
-
-        # Log the trade to CSV
-        log_trade(filled_order, 'buy')
-
-        # Log portfolio value
-        log_portfolio_value()
-    except Exception as e:
-        logging.error(f"Error in manual order submission: {e}")
-        print(f"Error in manual order submission: {e}")
 
     # Run the event loop
     loop.run_forever()
