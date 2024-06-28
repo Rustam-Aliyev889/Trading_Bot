@@ -5,17 +5,16 @@ import time
 import alpaca_trade_api as tradeapi
 
 # Path to the trade log file
-LOG_FILE = 'trade_log.csv'
+LOG_FILE = 'logs/trade_log.csv'
 
 def initialize_trade_log():
-
     if not os.path.exists(LOG_FILE):
+        os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
         with open(LOG_FILE, mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['Timestamp', 'Symbol', 'Action', 'Quantity', 'Price', 'Order ID', 'Status'])
 
 def wait_for_fill(api, order_id):
-
     while True:
         order = api.get_order(order_id)
         if order.status == 'filled':
@@ -23,7 +22,6 @@ def wait_for_fill(api, order_id):
         time.sleep(1)  # Wait for 1 second before checking again
 
 def log_trade(order, action):
-
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     symbol = order.symbol
     qty = order.qty

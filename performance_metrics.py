@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import alpaca_trade_api as tradeapi
 
 # Path to the performance metrics log file
-PERFORMANCE_LOG_FILE = 'performance_log.csv'
-REPORT_FILE = 'trading_strategy_report.txt'
+PERFORMANCE_LOG_FILE = 'logs/performance_log.csv'
+REPORT_FILE = 'logs/trading_strategy_report.txt'
 
 # Alpaca API credentials (replace with your own)
 ALPACA_API_KEY = 'PK6UA3MS4473Y9NFBJRC'
@@ -19,24 +19,36 @@ api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2
 
 def initialize_performance_log():
     if not os.path.exists(PERFORMANCE_LOG_FILE):
+        os.makedirs(os.path.dirname(PERFORMANCE_LOG_FILE), exist_ok=True)
         with open(PERFORMANCE_LOG_FILE, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Timestamp', 'Portfolio Value', 'Daily High', 'Daily Low', 'Daily Close', 'Volume'])
+            writer.writerow(['Timestamp', 'Portfolio Value', 'Cash Balance', 'Positions', 'Daily High', 'Daily Low', 'Daily Close', 'Volume'])
 
 def log_portfolio_value():
-    account = api.get_account()
-    portfolio_value = account.equity
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    try:
+        account = api.get_account()
+        portfolio_value = account.equity
+        cash_balance = account.cash
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-    bars = api.get_bars('SPY', tradeapi.rest.TimeFrame.Day, limit=1).df
-    daily_high = bars['high'].iloc[0]
-    daily_low = bars['low'].iloc[0]
-    daily_close = bars['close'].iloc[0]
-    volume = bars['volume'].iloc[0]
+        # Get positions
+        positions = api.list_positions()
+        positions_str = '; '.join([f"{position.symbol}: {position.qty}" for position in positions])
 
-    with open(PERFORMANCE_LOG_FILE, mode='a', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow([timestamp, portfolio_value, daily_high, daily_low, daily_close, volume])
+        bars = api.get_bars('SPY', tradeapi.rest.TimeFrame.Day, limit=1).df
+        daily_high = bars['high'].iloc[0]
+        daily_low = bars['low'].iloc[0]
+        daily_close = bars['close'].iloc[0]
+        volume = bars['volume'].iloc[0]
+
+        with open(PERFORMANCE_LOG_FILE, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([timestamp, portfolio_value, cash_balance, positions_str, daily_high, daily_low, daily_close, volume])
+
+        print(f"Logged portfolio value at {timestamp}")
+    except Exception as e:
+        print(f"Error logging portfolio value: {e}")
+
 
 def calculate_metrics(df):
     df['Daily Return'] = df['Portfolio Value'].pct_change()
@@ -144,20 +156,20 @@ def generate_charts(df):
     plt.figure(figsize=(10, 6))
     df['Cumulative Return'].plot()
     plt.title('Cumulative Return')
-    plt.savefig('cumulative_return.png')
+    plt.savefig('logs/cumulative_return.png')
     plt.close()
 
     plt.figure(figsize=(10, 6))
     df['Daily Return'].plot()
     plt.title('Daily Return')
-    plt.savefig('daily_return.png')
+    plt.savefig('logs/daily_return.png')
     plt.close()
 
     df['Drawdown'] = df['Portfolio Value'] / df['Portfolio Value'].cummax() - 1
     plt.figure(figsize=(10, 6))
     df['Drawdown'].plot()
     plt.title('Drawdown')
-    plt.savefig('drawdown.png')
+    plt.savefig('logs/drawdown.png')
     plt.close()
 
 # Example usage

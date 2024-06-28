@@ -9,7 +9,7 @@ from performance_metrics import initialize_performance_log, log_portfolio_value
 from indicators import calculate_volume_rsi, calculate_atr
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, filename='momentum_strategy.log', filemode='a',
+logging.basicConfig(level=logging.INFO, filename='logs/momentum_strategy.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 ALPACA_API_KEY = 'PK6UA3MS4473Y9NFBJRC'
@@ -26,6 +26,7 @@ volume_histories = {symbol: [] for symbol in symbols}
 high_histories = {symbol: [] for symbol in symbols}
 low_histories = {symbol: [] for symbol in symbols}
 active_trades = []
+last_log_time = datetime.now() - timedelta(minutes=5)  # Initialize last log time to 5 minutes ago
 
 def get_portfolio():
     try:
@@ -58,7 +59,7 @@ def generate_signals(price_history, volume_history, high_history, low_history):
     else:
         signal = 0  # Neutral signal
 
-    logging.info(f"Generated signal: {signal} based on returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}")
+    print(f"Generated signal: {signal} for {price_history}, returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}")
     return signal
 
 def get_latest_price(symbol):
@@ -71,9 +72,10 @@ def get_latest_price(symbol):
         return None
 
 def execute_trade(symbol, signal, portfolio, cash):
+    global last_log_time
     try:
         if signal == 0:
-            logging.info(f"Neutral signal received for {symbol}, no trade executed")
+            print(f"Neutral signal received for {symbol}, no trade executed")
             return
 
         latest_price = get_latest_price(symbol)
@@ -89,7 +91,7 @@ def execute_trade(symbol, signal, portfolio, cash):
             if cash < 10:
                 logging.info(f"Not enough cash to execute buy for {symbol}, cash available: {cash}")
                 return
-            logging.info(f"Executing Buy for {symbol} at {latest_price}")
+            print(f"Executing Buy for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
                 qty=quantity,
@@ -98,11 +100,12 @@ def execute_trade(symbol, signal, portfolio, cash):
                 time_in_force='day'
             )
             active_trades.append(order.id)
+            log_trade(order, 'buy')
         elif signal == -1:
             if symbol not in portfolio or portfolio[symbol] < quantity:
                 logging.info(f"Not enough quantity to execute sell for {symbol}, available: {portfolio.get(symbol, 0)}")
                 return
-            logging.info(f"Executing Sell for {symbol} at {latest_price}")
+            print(f"Executing Sell for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
                 qty=quantity,
@@ -111,10 +114,14 @@ def execute_trade(symbol, signal, portfolio, cash):
                 time_in_force='day'
             )
             active_trades.append(order.id)
-        logging.info(f"Order submitted: {order}")
+            log_trade(order, 'sell')
+        print(f"Order submitted: {order}")
 
-        # Log portfolio value
-        log_portfolio_value()
+        # Log portfolio value every 10 minutes
+        current_time = datetime.now()
+        if (current_time - last_log_time).total_seconds() >= 200:
+            log_portfolio_value()
+            last_log_time = current_time
 
     except tradeapi.rest.APIError as e:
         logging.error(f"API Error executing trade for {symbol}: {e}")
@@ -127,7 +134,7 @@ async def on_minute_bars(bar):
     volume_histories[symbol].append(bar.volume)
     high_histories[symbol].append(bar.high)
     low_histories[symbol].append(bar.low)
-    logging.info(f"Received new bar data for {symbol}: {bar.close}")
+    print(f"Received new bar data for {symbol}: {bar.close}")
 
     if len(price_histories[symbol]) > window:
         price_histories[symbol].pop(0)
@@ -152,6 +159,7 @@ async def run_momentum_strategy():
         logging.error(f"Error running strategy: {e}")
 
 async def main():
+    print("Strategy started")
     await run_momentum_strategy()
 
 if __name__ == "__main__":
