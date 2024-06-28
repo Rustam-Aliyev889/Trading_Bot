@@ -27,6 +27,16 @@ high_histories = {symbol: [] for symbol in symbols}
 low_histories = {symbol: [] for symbol in symbols}
 active_trades = []
 
+def get_portfolio():
+    try:
+        account = api.get_account()
+        cash = float(account.cash)
+        portfolio = {position.symbol: float(position.qty) for position in api.list_positions()}
+        return cash, portfolio
+    except Exception as e:
+        logging.error(f"Error fetching portfolio: {e}")
+        return 0, {}
+
 def generate_signals(price_history, volume_history, high_history, low_history):
     if len(price_history) < window or len(volume_history) < window:
         return 0  # Neutral signal if not enough data
@@ -60,7 +70,7 @@ def get_latest_price(symbol):
         logging.error(f"Error fetching latest price for {symbol}: {e}")
         return None
 
-def execute_trade(symbol, signal):
+def execute_trade(symbol, signal, portfolio, cash):
     try:
         if signal == 0:
             logging.info(f"Neutral signal received for {symbol}, no trade executed")
@@ -71,10 +81,14 @@ def execute_trade(symbol, signal):
             logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
             return
 
-        # fractional quantity based on $10 allocation
+        # Calculate fractional quantity based on $10 allocation
         quantity = round(10 / latest_price, 6)  # Round to 6 decimal places for fractional trading
 
         if signal == 1:
+            # Check if there is enough cash for the trade
+            if cash < 10:
+                logging.info(f"Not enough cash to execute buy for {symbol}, cash available: {cash}")
+                return
             logging.info(f"Executing Buy for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
@@ -85,6 +99,9 @@ def execute_trade(symbol, signal):
             )
             active_trades.append(order.id)
         elif signal == -1:
+            if symbol not in portfolio or portfolio[symbol] < quantity:
+                logging.info(f"Not enough quantity to execute sell for {symbol}, available: {portfolio.get(symbol, 0)}")
+                return
             logging.info(f"Executing Sell for {symbol} at {latest_price}")
             order = api.submit_order(
                 symbol=symbol,
@@ -104,13 +121,6 @@ def execute_trade(symbol, signal):
     except Exception as e:
         logging.error(f"Error executing trade for {symbol}: {e}")
 
-def check_order_status(order_id):
-    try:
-        order = api.get_order(order_id)
-        logging.info(f"Order Status for {order_id}: {order.status}")
-    except Exception as e:
-        logging.error(f"Error checking order status for {order_id}: {e}")
-
 async def on_minute_bars(bar):
     symbol = bar.symbol
     price_histories[symbol].append(bar.close)
@@ -127,7 +137,8 @@ async def on_minute_bars(bar):
 
     signal = generate_signals(price_histories[symbol], volume_histories[symbol], high_histories[symbol], low_histories[symbol])
     if signal is not None:
-        execute_trade(symbol, signal)
+        cash, portfolio = get_portfolio()  # Get updated portfolio and cash information
+        execute_trade(symbol, signal, portfolio, cash)
 
 async def run_momentum_strategy():
     try:
