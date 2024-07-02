@@ -20,23 +20,35 @@ api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2
 conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_feed='iex')
 
 symbols = ['AAPL', 'GOOG', 'AMZN', 'MSFT', 'META', 'TSLA', 'NFLX', 'NVDA', 'V', 'PYPL']
-window = 4
+window = 5
 price_histories = {symbol: [] for symbol in symbols}
 volume_histories = {symbol: [] for symbol in symbols}
 high_histories = {symbol: [] for symbol in symbols}
 low_histories = {symbol: [] for symbol in symbols}
+stop_loss_levels = {}
+take_profit_levels = {}
 active_trades = []
 last_log_time = datetime.now() - timedelta(minutes=5)  # Initialize last log time to 5 minutes ago
+
+# Risk management parameters
+max_daily_loss = 0.05  # 5% of portfolio
+max_drawdown = 0.15    # 15% of portfolio
+allocation_per_trade = 10  # $10 allocation per trade
+stop_loss_pct = 0.02   # 2% stop loss
+take_profit_pct = 0.05 # 5% take profit
+initial_portfolio_value = None
+current_daily_loss = 0
 
 def get_portfolio():
     try:
         account = api.get_account()
         cash = float(account.cash)
         portfolio = {position.symbol: float(position.qty) for position in api.list_positions()}
-        return cash, portfolio
+        portfolio_value = float(account.equity)
+        return cash, portfolio, portfolio_value
     except Exception as e:
         logging.error(f"Error fetching portfolio: {e}")
-        return 0, {}
+        return 0, {}, 0
 
 def generate_signals(price_history, volume_history, high_history, low_history):
     if len(price_history) < window or len(volume_history) < window:
@@ -71,24 +83,48 @@ def get_latest_price(symbol):
         logging.error(f"Error fetching latest price for {symbol}: {e}")
         return None
 
-def execute_trade(symbol, signal, portfolio, cash):
-    global last_log_time
+def set_stop_loss_take_profit(symbol, buy_price):
+    stop_loss_price = round(buy_price * (1 - stop_loss_pct), 2)
+    take_profit_price = round(buy_price * (1 + take_profit_pct), 2)
+    stop_loss_levels[symbol] = stop_loss_price
+    take_profit_levels[symbol] = take_profit_price
+
+def cancel_existing_orders(symbol):
     try:
+        orders = api.list_orders(status='open', symbols=[symbol])
+        for order in orders:
+            api.cancel_order(order.id)
+    except Exception as e:
+        logging.error(f"Error canceling orders for {symbol}: {e}")
+
+def execute_trade(symbol, signal, portfolio, cash, portfolio_value):
+    global last_log_time, current_daily_loss, initial_portfolio_value
+    try:
+        if initial_portfolio_value is None:
+            initial_portfolio_value = portfolio_value
+
+        # Calculate current drawdown
+        drawdown = (initial_portfolio_value - portfolio_value) / initial_portfolio_value
+
+        # Check daily loss limit and maximum drawdown
+        if current_daily_loss >= max_daily_loss * initial_portfolio_value or drawdown >= max_drawdown:
+            logging.info(f"Risk limits reached. Daily Loss: {current_daily_loss}, Drawdown: {drawdown}. No trades executed.")
+            return
+
         if signal == 0:
             print(f"Neutral signal received for {symbol}, no trade executed")
             return
 
         latest_price = get_latest_price(symbol)
-        if latest_price is None:
+        if (latest_price is None) or (latest_price <= 0):
             logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
             return
 
-        # Calculate fractional quantity based on $10 allocation
-        quantity = round(10 / latest_price, 6)  # Round to 6 decimal places for fractional trading
-
         if signal == 1:
+            # Calculate position size based on $10 allocation
+            quantity = round(allocation_per_trade / latest_price, 6)  # Round to 6 decimal places for fractional trading
             # Check if there is enough cash for the trade
-            if cash < 10:
+            if cash < allocation_per_trade:
                 logging.info(f"Not enough cash to execute buy for {symbol}, cash available: {cash}")
                 return
             print(f"Executing Buy for {symbol} at {latest_price}")
@@ -101,11 +137,23 @@ def execute_trade(symbol, signal, portfolio, cash):
             )
             active_trades.append(order.id)
             log_trade(order, 'buy')
+
+            # Set global stop loss and take profit levels
+            set_stop_loss_take_profit(symbol, latest_price)
+
         elif signal == -1:
-            if symbol not in portfolio or portfolio[symbol] < quantity:
+            if symbol not in portfolio or portfolio[symbol] <= 0:
                 logging.info(f"Not enough quantity to execute sell for {symbol}, available: {portfolio.get(symbol, 0)}")
                 return
-            print(f"Executing Sell for {symbol} at {latest_price}")
+
+            # Cancel any existing stop loss or take profit orders
+            cancel_existing_orders(symbol)
+
+            # Fetch updated portfolio data to get accurate available quantity
+            cash, portfolio, portfolio_value = get_portfolio()
+
+            # Sell the entire available quantity
+            quantity = portfolio[symbol]
             order = api.submit_order(
                 symbol=symbol,
                 qty=quantity,
@@ -115,11 +163,13 @@ def execute_trade(symbol, signal, portfolio, cash):
             )
             active_trades.append(order.id)
             log_trade(order, 'sell')
-        print(f"Order submitted: {order}")
 
-        # Log portfolio value every 10 minutes
+        # Update current daily loss
+        current_daily_loss += quantity * latest_price if signal == -1 else -quantity * latest_price
+
+        # Log portfolio value every 5 minutes
         current_time = datetime.now()
-        if (current_time - last_log_time).total_seconds() >= 200:
+        if (current_time - last_log_time).total_seconds() >= 300:
             log_portfolio_value()
             last_log_time = current_time
 
@@ -144,8 +194,15 @@ async def on_minute_bars(bar):
 
     signal = generate_signals(price_histories[symbol], volume_histories[symbol], high_histories[symbol], low_histories[symbol])
     if signal is not None:
-        cash, portfolio = get_portfolio()  # Get updated portfolio and cash information
-        execute_trade(symbol, signal, portfolio, cash)
+        cash, portfolio, portfolio_value = get_portfolio()  # Get updated portfolio and cash information
+        execute_trade(symbol, signal, portfolio, cash, portfolio_value)
+
+    # Check for stop loss or take profit triggers
+    if symbol in stop_loss_levels and symbol in take_profit_levels:
+        latest_price = get_latest_price(symbol)
+        if latest_price is not None:
+            if latest_price <= stop_loss_levels[symbol] or latest_price >= take_profit_levels[symbol]:
+                execute_trade(symbol, -1, portfolio, cash, portfolio_value)
 
 async def run_momentum_strategy():
     try:

@@ -4474,3 +4474,593 @@
 2024-06-28 20:19:54,511 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
 2024-06-28 20:19:54,719 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
 2024-06-28 20:33:01,559 - INFO - Not enough quantity to execute sell for AMZN, available: 0.023825333
+2024-07-01 17:56:56,165 - INFO - started stock data stream
+2024-07-01 17:56:56,166 - INFO - starting stock data websocket connection
+2024-07-01 17:56:57,033 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 17:56:57,197 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 17:58:30,138 - INFO - started stock data stream
+2024-07-01 17:58:30,139 - INFO - starting stock data websocket connection
+2024-07-01 17:58:30,613 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 17:58:30,817 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:01:08,350 - INFO - started stock data stream
+2024-07-01 18:01:08,350 - INFO - starting stock data websocket connection
+2024-07-01 18:01:08,821 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:01:09,028 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:04:27,187 - INFO - started stock data stream
+2024-07-01 18:04:27,187 - INFO - starting stock data websocket connection
+2024-07-01 18:04:27,666 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:04:27,878 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:07:02,008 - INFO - Strategy started
+2024-07-01 18:07:02,009 - INFO - Scheduling daily tasks
+2024-07-01 18:07:02,009 - INFO - Scheduler running at: 18:07:02.009424
+2024-07-01 18:07:02,010 - INFO - started stock data stream
+2024-07-01 18:07:02,010 - INFO - starting stock data websocket connection
+2024-07-01 18:07:02,483 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:07:02,691 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:07:03,023 - INFO - Scheduler running at: 18:07:03.023862
+2024-07-01 18:07:04,027 - INFO - Scheduler running at: 18:07:04.027861
+2024-07-01 18:07:05,018 - INFO - Scheduler running at: 18:07:05.018701
+2024-07-01 18:07:06,037 - INFO - Scheduler running at: 18:07:06.037502
+2024-07-01 18:07:07,046 - INFO - Scheduler running at: 18:07:07.046708
+2024-07-01 18:07:08,067 - INFO - Scheduler running at: 18:07:08.067644
+2024-07-01 18:07:09,084 - INFO - Scheduler running at: 18:07:09.084362
+2024-07-01 18:07:10,106 - INFO - Scheduler running at: 18:07:10.106478
+2024-07-01 18:07:11,094 - INFO - Scheduler running at: 18:07:11.094981
+2024-07-01 18:07:21,626 - INFO - Strategy started
+2024-07-01 18:07:21,627 - INFO - Scheduling daily tasks
+2024-07-01 18:07:21,627 - INFO - Scheduler running at: 18:07:21.627980
+2024-07-01 18:07:21,627 - INFO - started stock data stream
+2024-07-01 18:07:21,627 - INFO - starting stock data websocket connection
+2024-07-01 18:07:22,104 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:07:22,312 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:07:22,645 - INFO - Scheduler running at: 18:07:22.645970
+2024-07-01 18:07:23,666 - INFO - Scheduler running at: 18:07:23.666575
+2024-07-01 18:07:24,674 - INFO - Scheduler running at: 18:07:24.674970
+2024-07-01 18:07:25,675 - INFO - Scheduler running at: 18:07:25.675294
+2024-07-01 18:07:26,696 - INFO - Scheduler running at: 18:07:26.696876
+2024-07-01 18:07:27,688 - INFO - Scheduler running at: 18:07:27.688331
+2024-07-01 18:07:28,711 - INFO - Scheduler running at: 18:07:28.711162
+2024-07-01 18:07:29,718 - INFO - Scheduler running at: 18:07:29.718309
+2024-07-01 18:07:30,725 - INFO - Scheduler running at: 18:07:30.725489
+2024-07-01 18:07:31,732 - INFO - Scheduler running at: 18:07:31.732450
+2024-07-01 18:07:32,741 - INFO - Scheduler running at: 18:07:32.741234
+2024-07-01 18:07:33,760 - INFO - Scheduler running at: 18:07:33.760691
+2024-07-01 18:07:34,764 - INFO - Scheduler running at: 18:07:34.763551
+2024-07-01 18:07:35,755 - INFO - Scheduler running at: 18:07:35.755217
+2024-07-01 18:07:36,778 - INFO - Scheduler running at: 18:07:36.778184
+2024-07-01 18:07:37,782 - INFO - Scheduler running at: 18:07:37.782986
+2024-07-01 18:07:38,806 - INFO - Scheduler running at: 18:07:38.806182
+2024-07-01 18:07:39,817 - INFO - Scheduler running at: 18:07:39.817594
+2024-07-01 18:07:40,835 - INFO - Scheduler running at: 18:07:40.835217
+2024-07-01 18:07:41,857 - INFO - Scheduler running at: 18:07:41.857066
+2024-07-01 18:07:42,862 - INFO - Scheduler running at: 18:07:42.862513
+2024-07-01 18:07:43,874 - INFO - Scheduler running at: 18:07:43.874474
+2024-07-01 18:07:44,898 - INFO - Scheduler running at: 18:07:44.898846
+2024-07-01 18:07:45,905 - INFO - Scheduler running at: 18:07:45.905037
+2024-07-01 18:07:46,895 - INFO - Scheduler running at: 18:07:46.895872
+2024-07-01 18:07:47,912 - INFO - Scheduler running at: 18:07:47.912360
+2024-07-01 18:07:48,932 - INFO - Scheduler running at: 18:07:48.932329
+2024-07-01 18:07:49,937 - INFO - Scheduler running at: 18:07:49.937321
+2024-07-01 18:07:50,950 - INFO - Scheduler running at: 18:07:50.950572
+2024-07-01 18:07:51,956 - INFO - Scheduler running at: 18:07:51.956951
+2024-07-01 18:07:52,979 - INFO - Scheduler running at: 18:07:52.979483
+2024-07-01 18:07:53,983 - INFO - Scheduler running at: 18:07:53.983051
+2024-07-01 18:07:54,963 - INFO - Scheduler running at: 18:07:54.963472
+2024-07-01 18:07:55,970 - INFO - Scheduler running at: 18:07:55.970542
+2024-07-01 18:07:56,990 - INFO - Scheduler running at: 18:07:56.990683
+2024-07-01 18:07:57,995 - INFO - Scheduler running at: 18:07:57.995188
+2024-07-01 18:07:59,001 - INFO - Scheduler running at: 18:07:59.001550
+2024-07-01 18:08:00,594 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<run_scheduler() done, defined at c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py:181> exception=TypeError("generate_charts() missing 1 required positional argument: 'df'")>
+Traceback (most recent call last):
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 183, in run_scheduler
+    schedule.run_pending()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\schedule\__init__.py", line 854, in run_pending
+    default_scheduler.run_pending()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\schedule\__init__.py", line 101, in run_pending
+    self._run_job(job)
+  File "C:\Python Software\Python 3.11\Lib\site-packages\schedule\__init__.py", line 173, in _run_job
+    ret = job.run()
+          ^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\schedule\__init__.py", line 691, in run
+    ret = self.job_func()
+          ^^^^^^^^^^^^^^^
+TypeError: generate_charts() missing 1 required positional argument: 'df'
+2024-07-01 18:10:54,529 - INFO - Strategy started
+2024-07-01 18:10:54,529 - INFO - Next report and chart generation scheduled in 5.470923 seconds
+2024-07-01 18:10:54,529 - INFO - started stock data stream
+2024-07-01 18:10:54,529 - INFO - starting stock data websocket connection
+2024-07-01 18:10:55,164 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:10:55,399 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:11:00,665 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<schedule_daily_tasks() done, defined at c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py:162> exception=TypeError("generate_charts() missing 1 required positional argument: 'df'")>
+Traceback (most recent call last):
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 173, in schedule_daily_tasks
+    generate_charts()
+TypeError: generate_charts() missing 1 required positional argument: 'df'
+2024-07-01 18:13:40,857 - INFO - Strategy started
+2024-07-01 18:13:40,857 - INFO - Next report and chart generation scheduled in 19.142838 seconds
+2024-07-01 18:13:40,858 - INFO - started stock data stream
+2024-07-01 18:13:40,858 - INFO - starting stock data websocket connection
+2024-07-01 18:13:41,337 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:13:41,552 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:14:00,637 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<schedule_daily_tasks() done, defined at c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py:162> exception=KeyError('Cumulative Return')>
+Traceback (most recent call last):
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 176, in schedule_daily_tasks
+    generate_charts(df)
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\performance_metrics.py", line 157, in generate_charts
+    df['Cumulative Return'].plot()
+    ~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'Cumulative Return'
+2024-07-01 18:17:50,016 - INFO - Strategy started
+2024-07-01 18:17:50,017 - INFO - Next report and chart generation scheduled in 9.98347 seconds
+2024-07-01 18:17:50,017 - INFO - started stock data stream
+2024-07-01 18:17:50,017 - INFO - starting stock data websocket connection
+2024-07-01 18:17:50,494 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:17:50,700 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:18:00,828 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<schedule_daily_tasks() done, defined at c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py:162> exception=KeyError('Daily Return')>
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Daily Return'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\momentum_strategy.py", line 180, in schedule_daily_tasks
+    generate_charts(df)
+  File "c:\Users\rusta\OneDrive\Desktop\pROJECTS\Trading_Bot\performance_metrics.py", line 163, in generate_charts
+    df['Daily Return'].plot()
+    ~~^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Daily Return'
+2024-07-01 18:20:30,714 - INFO - Strategy started
+2024-07-01 18:20:30,714 - INFO - Next report and chart generation scheduled in 29.285777 seconds
+2024-07-01 18:20:30,714 - INFO - started stock data stream
+2024-07-01 18:20:30,715 - INFO - starting stock data websocket connection
+2024-07-01 18:20:31,223 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:20:31,433 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:21:00,612 - INFO - Next report and chart generation scheduled in 86399.388907 seconds
+2024-07-01 18:25:45,573 - INFO - Strategy started
+2024-07-01 18:25:45,574 - INFO - Next report and chart generation scheduled in 14.425437 seconds
+2024-07-01 18:25:45,575 - INFO - started stock data stream
+2024-07-01 18:25:45,575 - INFO - starting stock data websocket connection
+2024-07-01 18:25:46,094 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:25:46,302 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:26:00,939 - INFO - Next report and chart generation scheduled in 86399.060381 seconds
+2024-07-01 18:32:11,534 - INFO - Strategy started
+2024-07-01 18:32:11,535 - INFO - Next report and chart generation scheduled in 48.465781 seconds
+2024-07-01 18:32:11,535 - INFO - started stock data stream
+2024-07-01 18:32:11,535 - INFO - starting stock data websocket connection
+2024-07-01 18:32:12,011 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-01 18:32:12,224 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-01 18:33:00,008 - INFO - Generating daily report and charts.
+2024-07-01 18:33:00,586 - INFO - Next report and chart generation scheduled in 86399.413801 seconds
+2024-07-01 20:21:01,933 - INFO - Not enough quantity to execute sell for AMZN, available: 0.019325333
+2024-07-01 20:27:01,382 - INFO - Not enough quantity to execute sell for AMZN, available: 0.019325333
+2024-07-01 20:29:03,115 - INFO - Not enough quantity to execute sell for AMZN, available: 0.019325333
+2024-07-01 20:40:02,033 - INFO - Not enough quantity to execute sell for META, available: 0.000156
+2024-07-01 20:43:01,386 - INFO - Not enough quantity to execute sell for META, available: 0.000156
+2024-07-01 21:15:02,043 - ERROR - API Error executing trade for TSLA: potential wash trade detected. use complex orders
+2024-07-01 21:24:01,909 - ERROR - API Error executing trade for TSLA: potential wash trade detected. use complex orders
+2024-07-02 09:42:33,972 - WARNING - data websocket error, restarting connection: no close frame received or sent
+2024-07-02 09:42:33,996 - INFO - starting stock data websocket connection
+2024-07-02 09:42:35,087 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 09:42:35,541 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 15:15:07,982 - WARNING - data websocket error, restarting connection: no close frame received or sent
+2024-07-02 15:15:08,038 - INFO - starting stock data websocket connection
+2024-07-02 15:15:08,467 - ERROR - error during websocket communication: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 251, in _run_forever
+    await self._start_ws()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 104, in _start_ws
+    await self._connect()
+  File "C:\Python Software\Python 3.11\Lib\site-packages\alpaca_trade_api\stream.py", line 79, in _connect
+    self._ws = await websockets.connect(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\websockets\legacy\client.py", line 659, in __await_impl_timeout__
+    return await asyncio.wait_for(self.__await_impl__(), self.open_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\asyncio\tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\site-packages\websockets\legacy\client.py", line 663, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\asyncio\base_events.py", line 1045, in create_connection
+    infos = await self._ensure_resolved(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\asyncio\base_events.py", line 1419, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\asyncio\base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python Software\Python 3.11\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2024-07-02 15:15:10,692 - INFO - starting stock data websocket connection
+2024-07-02 15:15:11,359 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 15:15:11,529 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 15:49:51,600 - INFO - started stock data stream
+2024-07-02 15:49:51,600 - INFO - starting stock data websocket connection
+2024-07-02 15:49:52,216 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 15:49:52,426 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 15:54:02,482 - INFO - Not enough quantity to execute sell for PYPL, available: 3.417906
+2024-07-02 15:54:03,489 - INFO - Not enough quantity to execute sell for MSFT, available: 0.731597778
+2024-07-02 15:54:03,940 - ERROR - API Error executing trade for AMZN: invalid limit_price 192.58965. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 15:54:04,399 - ERROR - API Error executing trade for TSLA: invalid limit_price 204.88990500000003. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 15:55:03,428 - ERROR - API Error executing trade for AAPL: invalid limit_price 211.946625. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 15:55:03,880 - ERROR - API Error executing trade for V: invalid limit_price 257.580081. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 15:55:05,573 - INFO - Not enough quantity to execute sell for GOOG, available: 0.97687055
+2024-07-02 15:56:02,765 - INFO - Not enough quantity to execute sell for AMZN, available: 0.276280333
+2024-07-02 15:56:03,212 - ERROR - API Error executing trade for GOOG: invalid limit_price 180.318798. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 15:57:29,298 - INFO - started stock data stream
+2024-07-02 15:57:29,298 - INFO - starting stock data websocket connection
+2024-07-02 15:57:30,048 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 15:57:30,252 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 16:02:02,876 - INFO - Not enough quantity to execute sell for META, available: 0.098832
+2024-07-02 16:02:03,335 - ERROR - API Error executing trade for TSLA: invalid limit_price 204.88990500000003. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 16:03:01,913 - INFO - Not enough quantity to execute sell for PYPL, available: 3.417906
+2024-07-02 16:03:02,364 - ERROR - API Error executing trade for AMZN: invalid limit_price 192.58965. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 16:03:02,812 - ERROR - API Error executing trade for TSLA: invalid limit_price 204.88990500000003. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 16:03:04,888 - ERROR - API Error executing trade for NVDA: invalid limit_price 120.797325. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 16:03:05,159 - INFO - Not enough quantity to execute sell for AAPL, available: 1.404409769
+2024-07-02 16:07:19,398 - INFO - started stock data stream
+2024-07-02 16:07:19,400 - INFO - starting stock data websocket connection
+2024-07-02 16:07:20,016 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 16:07:20,227 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 16:12:02,780 - INFO - Not enough quantity to execute sell for AAPL, available: 1.404409769
+2024-07-02 16:13:04,303 - INFO - Not enough quantity to execute sell for AAPL, available: 1.404409769
+2024-07-02 16:14:03,024 - INFO - Not enough quantity to execute sell for AAPL, available: 1.404409769
+2024-07-02 16:15:01,926 - INFO - Not enough quantity to execute sell for MSFT, available: 0.731597778
+2024-07-02 16:15:02,388 - INFO - Not enough quantity to execute sell for AAPL, available: 1.404409769
+2024-07-02 16:16:03,406 - INFO - Not enough quantity to execute sell for NVDA, available: 1.848137
+2024-07-02 16:16:03,685 - INFO - Not enough quantity to execute sell for NFLX, available: 0.249954
+2024-07-02 16:17:01,918 - INFO - Not enough quantity to execute sell for AMZN, available: 0.275452333
+2024-07-02 16:18:03,710 - INFO - started stock data stream
+2024-07-02 16:18:03,710 - INFO - starting stock data websocket connection
+2024-07-02 16:18:04,200 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 16:18:04,405 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 16:25:02,100 - INFO - Not enough quantity to execute sell for MSFT, available: 0.731597778
+2024-07-02 16:29:02,087 - INFO - Not enough quantity to execute sell for NVDA, available: 1.847852
+2024-07-02 16:32:11,644 - INFO - started stock data stream
+2024-07-02 16:32:11,644 - INFO - starting stock data websocket connection
+2024-07-02 16:32:12,170 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 16:32:12,376 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 16:45:17,445 - INFO - started stock data stream
+2024-07-02 16:45:17,445 - INFO - starting stock data websocket connection
+2024-07-02 16:45:17,915 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 16:45:18,118 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 16:51:04,018 - INFO - Not enough quantity to execute sell for PYPL, available: 3.409336
+2024-07-02 17:10:58,040 - INFO - started stock data stream
+2024-07-02 17:10:58,041 - INFO - starting stock data websocket connection
+2024-07-02 17:10:58,903 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 17:10:59,113 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 17:15:02,695 - ERROR - API Error executing trade for NVDA: invalid stop_price 120.785. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 17:16:02,852 - ERROR - API Error executing trade for TSLA: invalid stop_price 204.869. sub-penny increment does not fulfill minimum pricing criteria
+2024-07-02 17:20:18,869 - INFO - started stock data stream
+2024-07-02 17:20:18,870 - INFO - starting stock data websocket connection
+2024-07-02 17:20:19,488 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 17:20:19,689 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 17:25:03,253 - ERROR - API Error executing trade for NVDA: fractional orders must be DAY orders
+2024-07-02 17:26:02,474 - ERROR - API Error executing trade for MSFT: fractional orders must be DAY orders
+2024-07-02 17:27:02,265 - ERROR - API Error executing trade for NVDA: fractional orders must be DAY orders
+2024-07-02 17:27:03,332 - ERROR - API Error executing trade for MSFT: fractional orders must be DAY orders
+2024-07-02 17:28:02,079 - ERROR - API Error executing trade for TSLA: fractional orders must be DAY orders
+2024-07-02 17:28:02,543 - ERROR - API Error executing trade for NVDA: fractional orders must be DAY orders
+2024-07-02 17:28:03,383 - ERROR - API Error executing trade for META: fractional orders must be DAY orders
+2024-07-02 17:28:03,840 - ERROR - API Error executing trade for AMZN: fractional orders must be DAY orders
+2024-07-02 17:28:04,293 - ERROR - API Error executing trade for PYPL: fractional orders must be DAY orders
+2024-07-02 17:29:05,000 - INFO - started stock data stream
+2024-07-02 17:29:05,000 - INFO - starting stock data websocket connection
+2024-07-02 17:29:05,602 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 17:29:05,814 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 17:35:02,799 - ERROR - API Error executing trade for NVDA: fractional orders must be market or limit orders
+2024-07-02 17:35:03,480 - ERROR - API Error executing trade for AAPL: fractional orders must be market or limit orders
+2024-07-02 17:36:03,932 - ERROR - API Error executing trade for PYPL: fractional orders must be market or limit orders
+2024-07-02 17:36:04,642 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:36:04,817 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:36:04,995 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:01,716 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:01,908 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:02,088 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:02,269 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:02,450 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:02,633 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:37:02,818 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:01,811 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:02,003 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:02,181 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:02,363 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:02,553 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:02,736 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:38:02,941 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:02,118 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:02,325 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:02,502 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:02,681 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:02,862 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:03,044 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:03,228 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:03,410 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:39:03,590 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:01,802 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:01,989 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:02,176 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:02,370 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:02,552 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:02,733 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:40:02,945 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:01,803 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:01,980 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:02,164 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:02,342 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:02,527 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:02,713 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:02,901 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:41:03,082 - INFO - Daily loss limit reached. Current daily loss: 5004.30681312. No further trades will be executed.
+2024-07-02 17:42:10,951 - INFO - started stock data stream
+2024-07-02 17:42:10,952 - INFO - starting stock data websocket connection
+2024-07-02 17:42:11,574 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 17:42:11,781 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 18:04:02,547 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:10:03,944 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:13:03,593 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:17:02,188 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:20:03,844 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:21:03,462 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:26:29,781 - INFO - started stock data stream
+2024-07-02 18:26:29,782 - INFO - starting stock data websocket connection
+2024-07-02 18:26:30,442 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 18:26:30,648 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 18:44:02,849 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:47:03,105 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:52:01,396 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:55:00,725 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 18:58:00,688 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:01:00,687 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:02:01,739 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:03:01,061 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:04:00,891 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:05:01,745 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:06:01,961 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:08:01,809 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:09:00,525 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:11:02,412 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:13:03,870 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:15:05,255 - INFO - started stock data stream
+2024-07-02 19:15:05,255 - INFO - starting stock data websocket connection
+2024-07-02 19:15:05,790 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 19:15:06,008 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 19:25:02,697 - ERROR - API Error executing trade for PYPL: insufficient qty available for order (requested: 54.392912, available: 52.313552)
+2024-07-02 19:26:02,560 - ERROR - API Error executing trade for AAPL: insufficient qty available for order (requested: 23.908028769, available: 23.075654769)
+2024-07-02 19:27:01,813 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.350277778)
+2024-07-02 19:28:01,357 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.350277778)
+2024-07-02 19:28:02,107 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.018672, available: 47.314816)
+2024-07-02 19:29:00,873 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 19:29:01,804 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.018672, available: 47.314816)
+2024-07-02 19:31:01,432 - ERROR - API Error executing trade for TSLA: fractional orders cannot be sold short
+2024-07-02 19:31:01,800 - ERROR - API Error executing trade for AAPL: insufficient qty available for order (requested: 23.908028769, available: 22.983168769)
+2024-07-02 19:32:00,775 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.079857, available: 0.000205)
+2024-07-02 19:33:00,896 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:33:01,653 - ERROR - API Error executing trade for TSLA: fractional orders cannot be sold short
+2024-07-02 19:34:01,608 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.079857, available: 0.000205)
+2024-07-02 19:34:02,925 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.337241333)
+2024-07-02 19:35:00,507 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.337241333)
+2024-07-02 19:35:01,601 - ERROR - API Error executing trade for TSLA: fractional orders cannot be sold short
+2024-07-02 19:37:02,027 - ERROR - API Error executing trade for V: insufficient qty available for order (requested: 7.597645708, available: 7.331295708)
+2024-07-02 19:38:01,433 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.284517778)
+2024-07-02 19:38:01,978 - ERROR - API Error executing trade for AAPL: insufficient qty available for order (requested: 23.908028769, available: 22.936925769)
+2024-07-02 19:39:00,497 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.018672, available: 47.071408)
+2024-07-02 19:39:00,775 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 19:39:01,694 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:40:00,680 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:40:01,134 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 19:40:02,235 - ERROR - API Error executing trade for GOOG: insufficient qty available for order (requested: 11.64007855, available: 10.71606055)
+2024-07-02 19:40:02,870 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.262597778)
+2024-07-02 19:41:00,686 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:41:01,065 - ERROR - API Error executing trade for V: insufficient qty available for order (requested: 7.597645708, available: 7.331295708)
+2024-07-02 19:41:01,430 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.262597778)
+2024-07-02 19:41:01,796 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.018672, available: 47.071408)
+2024-07-02 19:41:02,350 - ERROR - API Error executing trade for AAPL: insufficient qty available for order (requested: 23.908028769, available: 22.936925769)
+2024-07-02 19:42:01,456 - ERROR - API Error executing trade for TSLA: fractional orders cannot be sold short
+2024-07-02 19:42:02,651 - ERROR - API Error executing trade for GOOG: insufficient qty available for order (requested: 11.64007855, available: 10.71606055)
+2024-07-02 19:43:00,508 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.262597778)
+2024-07-02 19:43:02,605 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 19:43:03,181 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:43:03,927 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.019913, available: 0.000205)
+2024-07-02 19:44:00,499 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.018672, available: 47.071408)
+2024-07-02 19:44:01,055 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:44:01,796 - ERROR - API Error executing trade for GOOG: insufficient qty available for order (requested: 11.64007855, available: 10.71606055)
+2024-07-02 19:45:01,046 - ERROR - API Error executing trade for META: insufficient qty available for order (requested: 0.079857, available: 0.000205)
+2024-07-02 19:45:01,434 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:46:00,678 - ERROR - API Error executing trade for AAPL: insufficient qty available for order (requested: 23.908028769, available: 22.890682769)
+2024-07-02 19:47:00,510 - ERROR - API Error executing trade for V: insufficient qty available for order (requested: 7.597645708, available: 7.293245708)
+2024-07-02 19:47:01,648 - ERROR - API Error executing trade for TSLA: fractional orders cannot be sold short
+2024-07-02 19:47:02,757 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.558625333, available: 3.286350333)
+2024-07-02 19:47:03,129 - ERROR - API Error executing trade for PYPL: insufficient qty available for order (requested: 54.392912, available: 50.927312)
+2024-07-02 19:49:00,791 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 19:56:44,678 - INFO - started stock data stream
+2024-07-02 19:56:44,679 - INFO - starting stock data websocket connection
+2024-07-02 19:56:45,210 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 19:56:45,416 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 20:06:02,035 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 20:07:02,211 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.018672, available: 46.909136)
+2024-07-02 20:09:00,665 - ERROR - API Error executing trade for AAPL: insufficient qty available for order (requested: 23.954271769, available: 22.798196769)
+2024-07-02 20:09:01,308 - ERROR - API Error executing trade for MSFT: insufficient qty available for order (requested: 11.613317778, available: 11.196837778)
+2024-07-02 20:09:01,676 - ERROR - API Error executing trade for V: insufficient qty available for order (requested: 7.597645708, available: 7.293245708)
+2024-07-02 20:09:02,049 - ERROR - API Error executing trade for NVDA: insufficient qty available for order (requested: 49.099808, available: 46.990272)
+2024-07-02 20:09:02,758 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.609516333, available: 3.286350333)
+2024-07-02 20:10:00,492 - ERROR - API Error executing trade for PYPL: insufficient qty available for order (requested: 54.392912, available: 50.754032)
+2024-07-02 20:10:01,043 - ERROR - API Error executing trade for AMZN: insufficient qty available for order (requested: 4.609516333, available: 3.286350333)
+2024-07-02 20:11:44,581 - INFO - started stock data stream
+2024-07-02 20:11:44,581 - INFO - starting stock data websocket connection
+2024-07-02 20:11:45,216 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 20:11:45,418 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 20:17:00,314 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.0001973837517529821. No trades executed.
+2024-07-02 20:17:00,500 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.0001973837517529821. No trades executed.
+2024-07-02 20:17:00,674 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00020117767313204961. No trades executed.
+2024-07-02 20:17:00,847 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00019748359178922367. No trades executed.
+2024-07-02 20:17:01,023 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00019199238979303285. No trades executed.
+2024-07-02 20:17:01,205 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00019348999033752778. No trades executed.
+2024-07-02 20:17:01,385 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00019348999033752778. No trades executed.
+2024-07-02 20:17:01,558 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00020147719324106484. No trades executed.
+2024-07-02 20:17:01,753 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00020147719324106484. No trades executed.
+2024-07-02 20:18:00,301 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.000141473331428368. No trades executed.
+2024-07-02 20:18:00,480 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00013658116965006235. No trades executed.
+2024-07-02 20:18:00,658 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00013668100968630388. No trades executed.
+2024-07-02 20:18:00,831 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00013418500877895764. No trades executed.
+2024-07-02 20:18:01,012 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00013368580859745934. No trades executed.
+2024-07-02 20:18:01,189 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00013388548867008772. No trades executed.
+2024-07-02 20:18:01,364 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00012639748594804896. No trades executed.
+2024-07-02 20:18:01,541 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.00012709636620203036. No trades executed.
+2024-07-02 20:18:01,716 - INFO - Risk limits reached. Daily Loss: 5297.9955703236, Drawdown: 0.0001295923671093766. No trades executed.
+2024-07-02 20:18:54,353 - INFO - started stock data stream
+2024-07-02 20:18:54,353 - INFO - starting stock data websocket connection
+2024-07-02 20:18:54,994 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
+2024-07-02 20:18:55,209 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'AMZN', 'GOOG', 'META', 'MSFT', 'NFLX', 'NVDA', 'PYPL', 'TSLA', 'V'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
+2024-07-02 20:23:02,651 - INFO - Not enough quantity to execute sell for TSLA, available: 0
+2024-07-02 20:24:03,636 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00012351461691157637. No trades executed.
+2024-07-02 20:24:03,822 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001252120692054111. No trades executed.
+2024-07-02 20:24:04,010 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00012381416731636219. No trades executed.
+2024-07-02 20:24:04,279 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.000124513118260814. No trades executed.
+2024-07-02 20:24:04,460 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00012171731448271618. No trades executed.
+2024-07-02 20:24:04,642 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00012171731448271618. No trades executed.
+2024-07-02 20:24:04,825 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00012171731448271618. No trades executed.
+2024-07-02 20:25:00,306 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00012790802284848342. No trades executed.
+2024-07-02 20:25:00,489 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001249125188006253. No trades executed.
+2024-07-02 20:25:00,670 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001248126686655998. No trades executed.
+2024-07-02 20:25:00,849 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001248126686655998. No trades executed.
+2024-07-02 20:25:01,141 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.000121617464347836. No trades executed.
+2024-07-02 20:25:01,321 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.000121617464347836. No trades executed.
+2024-07-02 20:25:01,503 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.000121617464347836. No trades executed.
+2024-07-02 20:25:01,688 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.000121617464347836. No trades executed.
+2024-07-02 20:26:00,306 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010474279154422366. No trades executed.
+2024-07-02 20:26:00,487 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010474279154422366. No trades executed.
+2024-07-02 20:26:00,666 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010494249181412931. No trades executed.
+2024-07-02 20:26:00,848 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010494249181412931. No trades executed.
+2024-07-02 20:26:01,028 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010364444005996057. No trades executed.
+2024-07-02 20:26:01,212 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010364444005996057. No trades executed.
+2024-07-02 20:26:01,391 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010364444005996057. No trades executed.
+2024-07-02 20:26:01,666 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00010334488965517476. No trades executed.
+2024-07-02 20:27:00,313 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.497246482763335e-05. No trades executed.
+2024-07-02 20:27:00,496 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.497246482763335e-05. No trades executed.
+2024-07-02 20:27:00,692 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.497246482763335e-05. No trades executed.
+2024-07-02 20:27:00,890 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.487261469260787e-05. No trades executed.
+2024-07-02 20:27:01,161 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.487261469260787e-05. No trades executed.
+2024-07-02 20:27:01,345 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.517216509739369e-05. No trades executed.
+2024-07-02 20:27:01,567 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.487261469260787e-05. No trades executed.
+2024-07-02 20:27:01,808 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.487261469260787e-05. No trades executed.
+2024-07-02 20:27:02,033 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.487261469260787e-05. No trades executed.
+2024-07-02 20:27:02,257 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.487261469260787e-05. No trades executed.
+2024-07-02 20:28:00,312 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011442825463268584. No trades executed.
+2024-07-02 20:28:00,593 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011682465787097236. No trades executed.
+2024-07-02 20:28:00,779 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011682465787097236. No trades executed.
+2024-07-02 20:28:00,957 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011732390854566382. No trades executed.
+2024-07-02 20:28:01,141 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011732390854566382. No trades executed.
+2024-07-02 20:28:01,321 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011752360881556946. No trades executed.
+2024-07-02 20:28:01,558 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011862196029983255. No trades executed.
+2024-07-02 20:28:01,745 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00011862196029983255. No trades executed.
+2024-07-02 20:29:00,208 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00015117310428776869. No trades executed.
+2024-07-02 20:29:00,394 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00015307025685150903. No trades executed.
+2024-07-02 20:29:00,595 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00015307025685150903. No trades executed.
+2024-07-02 20:29:00,785 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00015307025685150903. No trades executed.
+2024-07-02 20:29:01,057 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00014608074740626452. No trades executed.
+2024-07-02 20:29:01,253 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001446828455172156. No trades executed.
+2024-07-02 20:29:01,456 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001446828455172156. No trades executed.
+2024-07-02 20:29:01,643 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00014588104713635886. No trades executed.
+2024-07-02 20:30:00,310 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -9.525702872566714e-05. No trades executed.
+2024-07-02 20:30:00,489 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -9.495747832088132e-05. No trades executed.
+2024-07-02 20:30:00,669 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.976527130435168e-05. No trades executed.
+2024-07-02 20:30:00,848 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.976527130435168e-05. No trades executed.
+2024-07-02 20:30:01,034 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.976527130435168e-05. No trades executed.
+2024-07-02 20:30:01,224 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.856706968520843e-05. No trades executed.
+2024-07-02 20:30:01,500 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.856706968520843e-05. No trades executed.
+2024-07-02 20:30:01,681 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.916617049478006e-05. No trades executed.
+2024-07-02 20:30:01,864 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -8.956557103444605e-05. No trades executed.
+2024-07-02 20:31:00,212 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00017533683694141136. No trades executed.
+2024-07-02 20:31:00,398 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00017533683694141136. No trades executed.
+2024-07-02 20:31:00,585 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00017533683694141136. No trades executed.
+2024-07-02 20:31:00,769 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001741386353222681. No trades executed.
+2024-07-02 20:31:00,954 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00017294043370312483. No trades executed.
+2024-07-02 20:31:01,138 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00016874672803597813. No trades executed.
+2024-07-02 20:31:01,419 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00017214163262364756. No trades executed.
+2024-07-02 20:31:01,600 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001748375862668652. No trades executed.
+2024-07-02 20:31:01,782 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001748375862668652. No trades executed.
+2024-07-02 20:32:00,317 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001908136078559748. No trades executed.
+2024-07-02 20:32:00,607 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001869194525936139. No trades executed.
+2024-07-02 20:32:00,789 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00018602080137925645. No trades executed.
+2024-07-02 20:32:00,969 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001869194525936139. No trades executed.
+2024-07-02 20:32:01,148 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0001869194525936139. No trades executed.
+2024-07-02 20:32:01,335 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002031950245876546. No trades executed.
+2024-07-02 20:32:01,515 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00020369427526234607. No trades executed.
+2024-07-02 20:32:01,697 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021018453403289913. No trades executed.
+2024-07-02 20:32:01,876 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021018453403289913. No trades executed.
+2024-07-02 20:32:02,055 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021258093727133097. No trades executed.
+2024-07-02 20:33:00,214 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021118303538228205. No trades executed.
+2024-07-02 20:33:00,412 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021507719064464296. No trades executed.
+2024-07-02 20:33:00,605 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021507719064464296. No trades executed.
+2024-07-02 20:33:00,792 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002188714957719784. No trades executed.
+2024-07-02 20:33:01,075 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00021867179550221803. No trades executed.
+2024-07-02 20:33:01,265 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002188714957719784. No trades executed.
+2024-07-02 20:33:01,466 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002188714957719784. No trades executed.
+2024-07-02 20:33:01,652 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002188714957719784. No trades executed.
+2024-07-02 20:33:01,872 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002188714957719784. No trades executed.
+2024-07-02 20:34:00,314 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002677980618889807. No trades executed.
+2024-07-02 20:34:00,509 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002677980618889807. No trades executed.
+2024-07-02 20:34:00,696 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026889641337324375. No trades executed.
+2024-07-02 20:34:00,884 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026899626350812393. No trades executed.
+2024-07-02 20:34:01,063 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026899626350812393. No trades executed.
+2024-07-02 20:34:01,245 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026899626350812393. No trades executed.
+2024-07-02 20:34:01,517 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002667995605395978. No trades executed.
+2024-07-02 20:34:01,697 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002667995605395978. No trades executed.
+2024-07-02 20:34:01,875 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002667995605395978. No trades executed.
+2024-07-02 20:35:00,319 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00027508712173901105. No trades executed.
+2024-07-02 20:35:00,503 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002730901190403905. No trades executed.
+2024-07-02 20:35:00,756 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026330480581704814. No trades executed.
+2024-07-02 20:35:00,945 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00027009461499238706. No trades executed.
+2024-07-02 20:35:01,155 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026290540527723686. No trades executed.
+2024-07-02 20:35:01,336 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.000265501508785429. No trades executed.
+2024-07-02 20:35:01,621 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002650022581108829. No trades executed.
+2024-07-02 20:35:01,805 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002650022581108829. No trades executed.
+2024-07-02 20:35:01,987 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002654016586505489. No trades executed.
+2024-07-02 20:36:00,206 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00029915100425777355. No trades executed.
+2024-07-02 20:36:00,395 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00029805265277351047. No trades executed.
+2024-07-02 20:36:00,608 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002911629934631461. No trades executed.
+2024-07-02 20:36:00,954 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00029276059562210067. No trades executed.
+2024-07-02 20:36:01,200 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002903641923836688. No trades executed.
+2024-07-02 20:36:01,514 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00029296029589186097. No trades executed.
+2024-07-02 20:36:01,743 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00028766823874045117. No trades executed.
+2024-07-02 20:36:01,930 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002897650915740972. No trades executed.
+2024-07-02 20:36:02,113 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002903641923836688. No trades executed.
+2024-07-02 20:36:02,363 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00029276059562210067. No trades executed.
+2024-07-02 20:37:00,312 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00026130780311828234. No trades executed.
+2024-07-02 20:37:00,494 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002625060047375709. No trades executed.
+2024-07-02 20:37:00,677 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002589113998799958. No trades executed.
+2024-07-02 20:37:00,861 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002581125988005185. No trades executed.
+2024-07-02 20:37:01,049 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002581125988005185. No trades executed.
+2024-07-02 20:37:01,330 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002542184435381576. No trades executed.
+2024-07-02 20:37:01,515 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002542184435381576. No trades executed.
+2024-07-02 20:37:01,696 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.00025591589583199236. No trades executed.
+2024-07-02 20:37:01,880 - INFO - Risk limits reached. Daily Loss: 6041.55128708, Drawdown: -0.0002582124489353987. No trades executed.
