@@ -1,0 +1,43 @@
+Trading Strategy Report
+=======================
+
+Running Period:
+----------------
+Start Time: 2023-07-10 00:00:00
+End Time: 2024-07-05 00:00:00
+Total Duration: 361 days 00:00:00
+
+Daily Performance:
+-------------------
+Initial Portfolio Value: 100000.00
+Final Portfolio Value: 99993.93
+Cumulative Return: -0.01%
+Sharpe Ratio: -0.03
+Max Drawdown: 0.01%
+
+Weekly Performance:
+--------------------
+Initial Portfolio Value: 100000.00
+Final Portfolio Value: 99993.93
+Cumulative Return: -0.01%
+Sharpe Ratio: -0.03
+Max Drawdown: 0.01%
+
+Monthly Performance:
+---------------------
+Initial Portfolio Value: 99999.74
+Final Portfolio Value: 99993.93
+Cumulative Return: -0.01%
+Sharpe Ratio: -0.03
+Max Drawdown: 0.01%
+
+Yearly Performance:
+--------------------
+Initial Portfolio Value: 99996.77
+Final Portfolio Value: 99993.93
+Cumulative Return: -0.00%
+Sharpe Ratio: -0.03
+Max Drawdown: 0.00%
+
+Note: Sharpe Ratio is displayed as 'Insufficient data' when there are not enough data points to calculate a meaningful value or if returns are constant.
+

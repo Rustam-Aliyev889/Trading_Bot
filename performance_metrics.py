@@ -11,8 +11,8 @@ PERFORMANCE_LOG_FILE = 'logs/performance_log.csv'
 REPORT_FILE = 'logs/trading_strategy_report.txt'
 
 # Alpaca API credentials (replace with your own)
-ALPACA_API_KEY = 'PK6UA3MS4473Y9NFBJRC'
-ALPACA_SECRET_KEY = 'BVclZK6KgCegMeBS6lPLt4Ezi4k6IRhE7OCmzuh3'
+ALPACA_API_KEY = 'PKMVI5CXPN6CGPSUTMO2'
+ALPACA_SECRET_KEY = 'yoB2K6D3gCvRepN3SkGFjSdzmeEXjxv6gZ0GNacw'
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
