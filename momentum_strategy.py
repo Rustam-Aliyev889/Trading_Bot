@@ -12,8 +12,8 @@ from indicators import calculate_volume_rsi, calculate_atr
 logging.basicConfig(level=logging.INFO, filename='logs/momentum_strategy.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-ALPACA_API_KEY = 'PKMVI5CXPN6CGPSUTMO2'
-ALPACA_SECRET_KEY = 'yoB2K6D3gCvRepN3SkGFjSdzmeEXjxv6gZ0GNacw'
+ALPACA_API_KEY = 'PKZ2OWWB59IYQ5FLB0YO'
+ALPACA_SECRET_KEY = '2EgGSwgaC4kCr4593ffJNh4S5UVfhAV00z73aMjS'
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
