@@ -35,7 +35,7 @@ def log_portfolio_value(portfolio_value, cash, portfolio):
             writer = csv.writer(file)
             writer.writerow([timestamp, portfolio_value, cash, positions_str])
 
-        print(f"Logged portfolio value at {timestamp}")
+        #print(f"Logged portfolio value at {timestamp}")
     except Exception as e:
         print(f"Error logging portfolio value: {e}")
         logging.error(f"Error logging portfolio value: {e}")

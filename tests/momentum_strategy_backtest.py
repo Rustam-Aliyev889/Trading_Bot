@@ -18,7 +18,7 @@ BASE_URL = 'https://paper-api.alpaca.markets'
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
 
 symbols = ['AAPL', 'GOOG', 'AMZN', 'MSFT', 'META', 'TSLA', 'NFLX', 'NVDA', 'V', 'PYPL']
-window = 10
+window = 30
 price_histories = {symbol: [] for symbol in symbols}
 volume_histories = {symbol: [] for symbol in symbols}
 high_histories = {symbol: [] for symbol in symbols}
@@ -31,9 +31,9 @@ portfolio_values = []  # List to track portfolio value over time
 # Risk management parameters
 max_daily_loss = 0.05  # 5% of portfolio
 max_drawdown = 0.15    # 15% of portfolio
-allocation_per_trade = 10  # $10 allocation per trade
-stop_loss_pct = 0.02   # 2% stop loss
-take_profit_pct = 0.05 # 5% take profit
+allocation_per_trade = 75  # $10 allocation per trade
+stop_loss_pct = 0.015   # 2% stop loss
+take_profit_pct = 0.07 # 5% take profit
 initial_portfolio_value = None
 current_daily_loss = 0
 cash, portfolio, portfolio_value = None, None, None  # Initialize portfolio variables
