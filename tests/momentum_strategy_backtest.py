@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import logging
 from test_trade_log import initialize_trade_log, log_trade, wait_for_fill
 from test_performance_metrics import initialize_performance_log, log_portfolio_value, generate_report
-from test_indicators import calculate_volume_rsi, calculate_atr
+from test_indicators import calculate_volume_rsi, calculate_atr, calculate_rsi
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='tests/logs/momentum_strategy_backtest.log', filemode='a',
@@ -31,9 +31,9 @@ portfolio_values = []  # List to track portfolio value over time
 # Risk management parameters
 max_daily_loss = 0.05  # 5% of portfolio
 max_drawdown = 0.15    # 15% of portfolio
-allocation_per_trade = 75  # $10 allocation per trade
-stop_loss_pct = 0.015   # 2% stop loss
-take_profit_pct = 0.07 # 5% take profit
+allocation_per_trade = 75  # $75 allocation per trade
+stop_loss_pct = 0.015   # 1.5% stop loss
+take_profit_pct = 0.06 # 6% take profit
 initial_portfolio_value = None
 current_daily_loss = 0
 cash, portfolio, portfolio_value = None, None, None  # Initialize portfolio variables
@@ -43,7 +43,7 @@ def get_portfolio():
     # Simulated portfolio for backtesting
     global cash, portfolio, portfolio_value, initial_portfolio_value
     if initial_portfolio_value is None:
-        initial_portfolio_value = 100000  # Starting with $100,000
+        initial_portfolio_value = 10000  # Starting with $10,000
     portfolio_value = initial_portfolio_value
     cash = portfolio_value if cash is None else cash
     portfolio = {} if portfolio is None else portfolio
@@ -62,15 +62,17 @@ def generate_signals(price_history, volume_history, high_history, low_history):
     data['returns'] = data['price'].pct_change()
     data['volume_rsi'] = calculate_volume_rsi(data['volume'], window)
     data['atr'] = calculate_atr(data['high'], data['low'], data['price'], window)
+    data['rsi'] = calculate_rsi(data['price'], window)
 
-    if data['returns'].iloc[-1] > 0 and data['volume_rsi'].iloc[-1] > 50:
+    # Example signal generation with RSI
+    if data['returns'].iloc[-1] > 0 and data['volume_rsi'].iloc[-1] > 50 and data['rsi'].iloc[-1] < 70:
         signal = 1
-    elif data['returns'].iloc[-1] < 0 and data['volume_rsi'].iloc[-1] < 50:
+    elif data['returns'].iloc[-1] < 0 and data['volume_rsi'].iloc[-1] < 50 and data['rsi'].iloc[-1] > 30:
         signal = -1
     else:
         signal = 0  # Neutral signal
 
-    logging.info(f"Generated signal: {signal} for {price_history[-1]}, returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}")
+    logging.info(f"Generated signal: {signal} for {price_history[-1]}, returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}, rsi: {data['rsi'].iloc[-1]}")
     return signal
 
 def set_stop_loss_take_profit(symbol, buy_price):
@@ -98,13 +100,13 @@ def execute_trade(symbol, signal, portfolio, cash, portfolio_value):
             logging.info(f"Neutral signal for {symbol}, no trade executed.")
             return
 
-        latest_price = price_histories[symbol][-1]  # Use last price from price history
+        latest_price = price_histories[symbol][-1]  # last price from price history
         if (latest_price is None) or (latest_price <= 0):
             logging.error(f"Could not fetch latest price for {symbol}, trade not executed")
             return
 
         if signal == 1:
-            # Calculate position size based on $10 allocation
+            # position size based on allocation per trade
             quantity = round(allocation_per_trade / latest_price, 6)  # Round to 6 decimal places for fractional trading
             # Check if there is enough cash for the trade
             if cash < allocation_per_trade:
