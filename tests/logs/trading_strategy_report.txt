@@ -3,38 +3,38 @@ Trading Strategy Report
 
 Running Period:
 ----------------
-Start Time: 2024-07-26 14:11:49
-End Time: 2024-07-26 14:17:37
-Total Duration: 0 days 00:05:48
+Start Time: 2024-07-29 18:14:30
+End Time: 2024-07-29 18:24:22
+Total Duration: 0 days 00:09:52
 
 Daily Performance:
 -------------------
-Initial Portfolio Value: 12389.35
-Final Portfolio Value: 12389.35
+Initial Portfolio Value: 11800.15
+Final Portfolio Value: 11800.15
 Cumulative Return: 0.00%
 Sharpe Ratio: Insufficient data (if applicable)
 Max Drawdown: 0.00%
 
 Weekly Performance:
 --------------------
-Initial Portfolio Value: 12389.35
-Final Portfolio Value: 12389.35
+Initial Portfolio Value: 11800.15
+Final Portfolio Value: 11800.15
 Cumulative Return: 0.00%
 Sharpe Ratio: Insufficient data (if applicable)
 Max Drawdown: 0.00%
 
 Monthly Performance:
 ---------------------
-Initial Portfolio Value: 12389.35
-Final Portfolio Value: 12389.35
+Initial Portfolio Value: 11800.15
+Final Portfolio Value: 11800.15
 Cumulative Return: 0.00%
 Sharpe Ratio: Insufficient data (if applicable)
 Max Drawdown: 0.00%
 
 Yearly Performance:
 --------------------
-Initial Portfolio Value: 12389.35
-Final Portfolio Value: 12389.35
+Initial Portfolio Value: 11800.15
+Final Portfolio Value: 11800.15
 Cumulative Return: 0.00%
 Sharpe Ratio: Insufficient data (if applicable)
 Max Drawdown: 0.00%

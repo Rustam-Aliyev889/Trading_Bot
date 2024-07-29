@@ -17,7 +17,7 @@ BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
 
-symbols = ['AAPL', 'GOOG', 'AMZN', 'MSFT', 'META', 'TSLA', 'NFLX', 'NVDA', 'V', 'PYPL']
+symbols = ['AAPL', 'MSFT', 'GOOG', 'NVDA', 'JPM', 'BAC', 'V', 'JNJ', 'PFE', 'PG', 'KO', 'SPY', 'QQQ', 'DIA', 'IWM', 'GLD', 'SLV', 'XOM', 'CVX']
 window = 30
 price_histories = {symbol: [] for symbol in symbols}
 volume_histories = {symbol: [] for symbol in symbols}

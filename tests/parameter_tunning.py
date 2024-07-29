@@ -73,7 +73,7 @@ print(f"Total time taken: {total_time:.2f} seconds")
 
 # Save initial results to a file for further analysis
 results_df = pd.DataFrame(results, columns=['Parameters', 'Cumulative Return', 'Sharpe Ratio', 'Max Drawdown', 'Time'])
-results_df.to_csv('parameter_tuning_results_initial.csv', index=False)
+results_df.to_csv('tests/logs/parameter_tuning_results_initial.csv', index=False)
 
 # Validate the best parameters across multiple symbols
 def validate_across_symbols(best_params):
@@ -100,4 +100,4 @@ for result in validation_results:
 
 # Save validation results to a file for further analysis
 validation_results_df = pd.DataFrame(validation_results, columns=['Symbol', 'Parameters', 'Cumulative Return', 'Sharpe Ratio', 'Max Drawdown', 'Time'])
-validation_results_df.to_csv('tests/parameter_tuning_validation_results.csv', index=False)
+validation_results_df.to_csv('tests/logs/parameter_tuning_validation_results.csv', index=False)

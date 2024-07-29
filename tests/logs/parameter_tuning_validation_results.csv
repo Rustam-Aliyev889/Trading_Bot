@@ -1,0 +1,20 @@
+Symbol,Parameters,Cumulative Return,Sharpe Ratio,Max Drawdown,Time
+AAPL,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,29.675360202789307
+MSFT,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,26.670762538909912
+GOOG,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,23.4082612991333
+NVDA,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,32.4608736038208
+JPM,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,23.02882194519043
+BAC,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,30.042019605636597
+V,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,25.334593534469604
+JNJ,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,21.167721271514893
+PFE,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,28.481547832489014
+PG,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,18.0534610748291
+KO,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,26.337961196899414
+SPY,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,28.036562204360962
+QQQ,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,27.802658319473267
+DIA,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,9.247970342636108
+IWM,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,28.274543285369873
+GLD,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,13.782066822052002
+SLV,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,14.762622833251953
+XOM,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,25.12531328201294
+CVX,"{'window': 15, 'allocation_per_trade': 25, 'stop_loss_pct': 0.015, 'take_profit_pct': 0.06}",0.05259202642799992,0.22602450997709375,-0.5140966386268759,20.408010244369507
