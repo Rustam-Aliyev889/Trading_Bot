@@ -1,18 +1,22 @@
 import csv
 import os
+from dotenv import load_dotenv
 from datetime import datetime, timedelta
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import alpaca_trade_api as tradeapi
 import logging
+
+load_dotenv()
+
 # Path to the performance metrics log file
 PERFORMANCE_LOG_FILE = 'tests/logs/performance_log.csv'
 REPORT_FILE = 'tests/logs/trading_strategy_report.txt'
 
 # Alpaca API credentials (replace with your own)
-ALPACA_API_KEY = 'PKZ2OWWB59IYQ5FLB0YO'
-ALPACA_SECRET_KEY = '2EgGSwgaC4kCr4593ffJNh4S5UVfhAV00z73aMjS'
+ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
+ALPACA_SECRET_KEY = os.getenv('ALPACA_SECRET_KEY')
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')

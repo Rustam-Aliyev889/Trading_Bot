@@ -6,21 +6,24 @@ import asyncio
 import logging
 from trade_log import initialize_trade_log, log_trade, wait_for_fill
 from performance_metrics import initialize_performance_log, log_portfolio_value
-from indicators import calculate_volume_rsi, calculate_atr
+from indicators import calculate_volume_rsi, calculate_atr, calculate_rsi
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='logs/momentum_strategy.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-ALPACA_API_KEY = 'PKZ2OWWB59IYQ5FLB0YO'
-ALPACA_SECRET_KEY = '2EgGSwgaC4kCr4593ffJNh4S5UVfhAV00z73aMjS'
+ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
+ALPACA_SECRET_KEY = os.getenv('ALPACA_SECRET_KEY')
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
 conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_feed='iex')
 
-symbols = ['AAPL', 'GOOG', 'AMZN', 'MSFT', 'META', 'TSLA', 'NFLX', 'NVDA', 'V', 'PYPL']
-window = 10
+symbols = ['AAPL', 'MSFT', 'GOOG', 'NVDA', 'JPM', 'BAC', 'V', 'JNJ', 'PFE', 'PG', 'KO', 'SPY', 'QQQ', 'DIA', 'IWM', 'GLD', 'SLV', 'XOM', 'CVX']
+window = 30
 price_histories = {symbol: [] for symbol in symbols}
 volume_histories = {symbol: [] for symbol in symbols}
 high_histories = {symbol: [] for symbol in symbols}
@@ -33,9 +36,9 @@ last_log_time = datetime.now() - timedelta(minutes=5)  # Initialize last log tim
 # Risk management parameters
 max_daily_loss = 0.05  # 5% of portfolio
 max_drawdown = 0.15    # 15% of portfolio
-allocation_per_trade = 10  # $10 allocation per trade
-stop_loss_pct = 0.02   # 2% stop loss
-take_profit_pct = 0.05 # 5% take profit
+allocation_per_trade = 75  # $75 allocation per trade
+stop_loss_pct = 0.015   # 1.5% stop loss
+take_profit_pct = 0.06 # 6% take profit
 initial_portfolio_value = None
 current_daily_loss = 0
 
@@ -63,15 +66,17 @@ def generate_signals(price_history, volume_history, high_history, low_history):
     data['returns'] = data['price'].pct_change()
     data['volume_rsi'] = calculate_volume_rsi(data['volume'], window)
     data['atr'] = calculate_atr(data['high'], data['low'], data['price'], window)
+    data['rsi'] = calculate_rsi(data['price'], window)
 
-    if data['returns'].iloc[-1] > 0 and data['volume_rsi'].iloc[-1] > 50:
+    # Example signal generation with RSI
+    if data['returns'].iloc[-1] > 0 and data['volume_rsi'].iloc[-1] > 50 and data['rsi'].iloc[-1] < 70:
         signal = 1
-    elif data['returns'].iloc[-1] < 0 and data['volume_rsi'].iloc[-1] < 50:
+    elif data['returns'].iloc[-1] < 0 and data['volume_rsi'].iloc[-1] < 50 and data['rsi'].iloc[-1] > 30:
         signal = -1
     else:
         signal = 0  # Neutral signal
 
-    print(f"Generated signal: {signal} for {price_history}, returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}")
+    logging.info(f"Generated signal: {signal} for {price_history[-1]}, returns: {data['returns'].iloc[-1]}, volume_rsi: {data['volume_rsi'].iloc[-1]}, atr: {data['atr'].iloc[-1]}, rsi: {data['rsi'].iloc[-1]}")
     return signal
 
 def get_latest_price(symbol):

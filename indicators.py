@@ -16,3 +16,11 @@ def calculate_atr(high, low, close, window):
     tr = high_low.combine(high_close, np.maximum).combine(low_close, np.maximum)
     atr = tr.rolling(window).mean()
     return atr
+
+def calculate_rsi(close_prices, window=14):
+    delta = close_prices.diff()
+    gain = (delta.where(delta > 0, 0)).rolling(window).mean()
+    loss = (-delta.where(delta < 0, 0)).rolling(window).mean()
+    rs = gain / loss
+    rsi = 100 - (100 / (1 + rs))
+    return rsi

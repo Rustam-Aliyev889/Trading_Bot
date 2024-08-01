@@ -6,13 +6,17 @@ import logging
 from test_trade_log import initialize_trade_log, log_trade, wait_for_fill
 from test_performance_metrics import initialize_performance_log, log_portfolio_value, generate_report
 from test_indicators import calculate_volume_rsi, calculate_atr, calculate_rsi
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='tests/logs/momentum_strategy_backtest.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-ALPACA_API_KEY = 'PKZ2OWWB59IYQ5FLB0YO'
-ALPACA_SECRET_KEY = '2EgGSwgaC4kCr4593ffJNh4S5UVfhAV00z73aMjS'
+ALPACA_API_KEY = os.getenv('ALPACA_API_KEY')
+ALPACA_SECRET_KEY = os.getenv('ALPACA_SECRET_KEY')
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
