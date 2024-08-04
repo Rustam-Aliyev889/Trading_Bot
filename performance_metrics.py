@@ -21,9 +21,9 @@ BASE_URL = 'https://paper-api.alpaca.markets'
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2')
 
 def initialize_performance_log():
-    if not os.path.exists(PERFORMANCE_LOG_FILE):
-        os.makedirs(os.path.dirname(PERFORMANCE_LOG_FILE), exist_ok=True)
-        with open(PERFORMANCE_LOG_FILE, mode='w', newline='') as file:
+    if not os.path.exists(PERFORMANCE_LOG_FILE):  # Checks if the log file exists
+        os.makedirs(os.path.dirname(PERFORMANCE_LOG_FILE), exist_ok=True)  # Creates the directory if it doesn't exist
+        with open(PERFORMANCE_LOG_FILE, mode='w', newline='') as file:  # Opens the file in write mode
             writer = csv.writer(file)
             writer.writerow(['Timestamp', 'Portfolio Value', 'Cash Balance', 'Positions', 'Daily High', 'Daily Low', 'Daily Close', 'Volume'])
 
@@ -54,9 +54,12 @@ def log_portfolio_value():
 
 
 def calculate_metrics(df):
+    # Calculates the Sharpe ratio and maximum drawdown from the given DataFrame of portfolio values.
+
     df['Daily Return'] = df['Portfolio Value'].pct_change()
     df['Cumulative Return'] = (1 + df['Daily Return']).cumprod() - 1
 
+    # Calculate mean and standard deviation of daily returns
     mean_return = df['Daily Return'].mean()
     std_return = df['Daily Return'].std()
 
@@ -64,8 +67,10 @@ def calculate_metrics(df):
     if std_return == 0 or np.isnan(std_return):
         sharpe_ratio = 'Insufficient data'
     else:
+        # Sharpe ratio, assuming 252 trading days in a year
         sharpe_ratio = (mean_return / std_return) * np.sqrt(252)
 
+    # Maximum drawdown
     roll_max = df['Portfolio Value'].cummax()
     drawdown = df['Portfolio Value'] / roll_max - 1
     max_drawdown = drawdown.min()
@@ -73,13 +78,18 @@ def calculate_metrics(df):
     return sharpe_ratio, max_drawdown
 
 def period_metrics(df, period):
+    """ Resamples the data to a specified period (e.g., monthly or weekly) and calculates initial value,
+        final value, cumulative return, Sharpe ratio, and maximum drawdown for that period."""
+
+    # Resample the DataFrame to the specified period and take the last value
     resampled_df = df.resample(period).last()
     resampled_df['Daily Return'] = resampled_df['Portfolio Value'].pct_change()
     resampled_df['Cumulative Return'] = (1 + resampled_df['Daily Return']).cumprod() - 1
-
     initial_value = resampled_df['Portfolio Value'].iloc[0]
     final_value = resampled_df['Portfolio Value'].iloc[-1]
     cumulative_return = (final_value / initial_value) - 1
+    
+    # Calculate Sharpe ratio and maximum drawdown for the resampled period
     sharpe_ratio, max_drawdown = calculate_metrics(resampled_df)
 
     return initial_value, final_value, cumulative_return, sharpe_ratio, max_drawdown

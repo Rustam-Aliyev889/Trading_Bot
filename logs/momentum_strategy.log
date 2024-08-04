@@ -1,4 +1,0 @@
-2024-08-01 14:07:42,537 - INFO - started stock data stream
-2024-08-01 14:07:42,537 - INFO - starting stock data websocket connection
-2024-08-01 14:07:43,233 - INFO - connected to: wss://stream.data.alpaca.markets/v2/iex
-2024-08-01 14:07:43,399 - INFO - subscribed to trades: [], quotes: [], bars: ['AAPL', 'BAC', 'CVX', 'DIA', 'GLD', 'GOOG', 'IWM', 'JNJ', 'JPM', 'KO', 'MSFT', 'NVDA', 'PFE', 'PG', 'QQQ', 'SLV', 'SPY', 'V', 'XOM'], updatedBars: [], dailyBars: [], statuses: [], lulds: [], cancelErrors: [], corrections: []
