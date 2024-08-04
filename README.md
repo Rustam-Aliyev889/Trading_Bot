@@ -101,7 +101,7 @@ Before using this trading bot with real money, I strongly recommend that you:
     - Continuously refine and optimize the strategy based on the results from backtesting and paper trading.
     - Stay informed about market trends and adapt the strategy as necessary.
 
-5. **Monitor Regularly (Minimum 1-2 monts)**:
+5. **Monitor Regularly (Minimum 1-2 months)**:
     - Regularly monitor the bot's performance and make adjustments if necessary.
     - Do not rely solely on the bot; human oversight is important to handle unexpected market events.
 
