@@ -23,7 +23,7 @@ api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, api_version='v2
 conn = tradeapi.stream.Stream(ALPACA_API_KEY, ALPACA_SECRET_KEY, BASE_URL, data_feed='iex')
 
 symbols = ['AAPL', 'MSFT', 'GOOG', 'NVDA', 'JPM', 'BAC', 'V', 'JNJ', 'PFE', 'PG', 'KO', 'SPY', 'QQQ', 'DIA', 'IWM', 'GLD', 'SLV', 'XOM', 'CVX']
-window = 15
+window = 30
 price_histories = {symbol: [] for symbol in symbols}
 volume_histories = {symbol: [] for symbol in symbols}
 high_histories = {symbol: [] for symbol in symbols}
@@ -38,7 +38,7 @@ max_daily_loss = 0.05  # 5% of portfolio
 max_drawdown = 0.15    # 15% of portfolio
 allocation_per_trade = 75  # $75 allocation per trade
 stop_loss_pct = 0.015   # 1.5% stop loss
-take_profit_pct = 0.05 # 6% take profit
+take_profit_pct = 0.06 # 6% take profit
 initial_portfolio_value = None
 current_daily_loss = 0
 
